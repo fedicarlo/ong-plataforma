@@ -1,0 +1,185 @@
+/* ===============================
+   DESIGN SYSTEM — ONG PLATAFORMA
+   =============================== */
+:root {
+  /* 🎨 Paleta (8+) */
+  --color-primary: #0a66c2;
+  --color-primary-light: #4398e0;
+  --color-secondary: #f5b700;
+  --color-secondary-dark: #c28c00;
+  --color-neutral-100: #ffffff;
+  --color-neutral-200: #f8f9fa;
+  --color-neutral-400: #ced4da;
+  --color-neutral-700: #495057;
+  --color-neutral-900: #212529;
+
+  /* 🧱 Tipografia (5+) */
+  --font-family: "Inter", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  --fs-100: 0.75rem;
+  --fs-200: 0.875rem;
+  --fs-300: 1rem;
+  --fs-400: 1.25rem;
+  --fs-500: 1.5rem;
+  --fs-600: 2rem;
+  --fs-700: 2.5rem;
+
+  /* 📏 Espaçamento modular */
+  --space-1: 8px;
+  --space-2: 16px;
+  --space-3: 24px;
+  --space-4: 32px;
+  --space-5: 48px;
+  --space-6: 64px;
+
+  /* 🌐 Grid */
+  --grid-columns: 12;
+  --grid-gap: 16px;
+}
+
+/* ===============================
+   GLOBAIS
+   =============================== */
+html { box-sizing: border-box; scroll-behavior: smooth; }
+*, *::before, *::after { box-sizing: inherit; }
+
+body {
+  font-family: var(--font-family);
+  font-size: var(--fs-300);
+  line-height: 1.6;
+  color: var(--color-neutral-900);
+  background-color: var(--color-neutral-200);
+  margin: 0;
+}
+
+img { max-width: 100%; display: block; height: auto; }
+a { color: var(--color-primary); text-decoration: none; transition: color .2s ease; }
+a:hover, a:focus { color: var(--color-secondary-dark); }
+
+h1, h2, h3, h4 { font-weight: 700; color: var(--color-neutral-900); }
+
+.container { max-width: 1200px; margin: 0 auto; padding: var(--space-3); }
+
+/* Grid utilitário */
+.grid { display: grid; gap: var(--grid-gap); }
+.grid-2 { grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
+.grid-3 { grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); }
+
+/* Cartões */
+.card {
+  background: var(--color-neutral-100);
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,.05);
+  padding: var(--space-3);
+  display: flex;
+  flex-direction: column;
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+.card:hover { transform: translateY(-4px); box-shadow: 0 6px 14px rgba(0,0,0,.1); }
+
+/* Botões */
+button, .btn {
+  background-color: var(--color-primary);
+  color: var(--color-neutral-100);
+  border: none;
+  border-radius: 8px;
+  padding: 10px 20px;
+  font-size: var(--fs-300);
+  cursor: pointer;
+  transition: background-color .2s ease, transform .1s ease;
+}
+button:hover, .btn:hover { background-color: var(--color-primary-light); }
+button:active, .btn:active { transform: translateY(1px); }
+button:disabled { background-color: var(--color-neutral-400); cursor: not-allowed; }
+
+/* Tags/Badges */
+.tag {
+  background-color: var(--color-secondary);
+  color: var(--color-neutral-900);
+  border-radius: 999px;
+  padding: 4px 12px;
+  font-size: var(--fs-100);
+  display: inline-block;
+  margin-bottom: var(--space-1);
+}
+
+/* ===============================
+   CABEÇALHO E NAVEGAÇÃO
+   =============================== */
+header { background-color: var(--color-primary); color: var(--color-neutral-100); }
+header .topbar {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: var(--space-2) var(--space-3);
+}
+header nav { display: flex; align-items: center; gap: var(--space-2); }
+header nav a { color: var(--color-neutral-100); font-weight: 500; position: relative; }
+header nav a::after {
+  content: ""; display:block; height:2px; width:0;
+  background-color: var(--color-secondary);
+  transition: width .3s ease; margin-top: 4px;
+}
+header nav a:hover::after, header nav a:focus::after { width:100%; }
+
+/* Menu mobile */
+.nav-toggle { display: none; background: none; border: none; color: var(--color-neutral-100); font-size: 1.75rem; }
+@media (max-width: 768px) {
+  nav { display: none; flex-direction: column; background-color: var(--color-primary); padding: var(--space-3); }
+  nav.active { display: flex; }
+  .nav-toggle { display: block; }
+}
+
+/* Hero básico (index) */
+.hero picture img { width: 100%; border-bottom: 4px solid var(--color-secondary); }
+.hero .intro { padding: var(--space-3) 0; }
+
+/* ===============================
+   FORMULÁRIOS + FEEDBACK
+   =============================== */
+form {
+  background: var(--color-neutral-100);
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,.05);
+  padding: var(--space-4);
+}
+label { display:block; margin-top:.5rem; }
+input, select {
+  border: 1px solid var(--color-neutral-400);
+  border-radius: 6px;
+  padding: var(--space-2);
+  width: 100%;
+  margin-bottom: var(--space-2);
+  font-size: var(--fs-300);
+  background: var(--color-neutral-100);
+}
+input:focus, select:focus { border-color: var(--color-primary); outline: 2px solid var(--color-primary-light); }
+fieldset { border:1px solid var(--color-neutral-400); border-radius: 8px; padding: var(--space-3); margin-bottom: var(--space-3); }
+legend { font-weight: 700; padding: 0 var(--space-1); }
+
+.alert {
+  background-color: var(--color-secondary);
+  color: var(--color-neutral-900);
+  padding: var(--space-2);
+  border-radius: 6px;
+  margin-bottom: var(--space-2);
+}
+.toast {
+  position: fixed; bottom: var(--space-3); right: var(--space-3);
+  background: var(--color-primary); color: #fff;
+  padding: var(--space-2); border-radius: 8px; animation: fadein .5s ease;
+}
+@keyframes fadein { from { opacity:0; transform: translateY(10px);} to { opacity:1; transform: translateY(0);} }
+
+/* ===============================
+   FOOTER
+   =============================== */
+footer { background:#fafafa; margin-top: var(--space-4); border-top: 1px solid #eee; }
+footer p { margin: 0; padding: var(--space-3) 0; }
+
+/* ===============================
+   BREAKPOINTS (5 níveis)
+   =============================== */
+/* Base: mobile-first */
+@media (min-width: 480px) { body { font-size: var(--fs-300); } }
+@media (min-width: 768px) { body { font-size: var(--fs-400); } }
+@media (min-width: 992px) { body { font-size: var(--fs-500); } }
+@media (min-width: 1200px) { .container { max-width: 1200px; } }
+@media (min-width: 1600px) { body { font-size: var(--fs-600); } }

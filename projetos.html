@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <title>Projetos — [ONG]</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Conheça nossos projetos sociais, metas e como ajudar com voluntariado e doações.">
+</head>
+<body>
+  <header class="container" role="banner">
+    <div style="display:flex; align-items:center; gap:.75rem;">
+      <img src="assets/icons/logo.svg" alt="Logotipo da ONG" width="28" height="28">
+      <strong>[ONG]</strong>
+    </div>
+    <nav aria-label="Navegação principal">
+      <a href="index.html">Início</a>
+      <a href="projetos.html" aria-current="page">Projetos</a>
+      <a href="cadastro.html">Cadastro</a>
+    </nav>
+    <section aria-label="Imagem de capa dos projetos">
+      <picture>
+        <source srcset="assets/img/projetos-acao.webp" type="image/webp">
+        <img src="assets/img/projetos-acao.jpg" alt="Voluntários em ação" loading="lazy" decoding="async">
+      </picture>
+    </section>
+  </header>
+
+  <main id="conteudo" class="container" role="main">
+    <h1>Projetos sociais</h1>
+
+    <section aria-labelledby="p1">
+      <h2 id="p1">Projeto 1 — Educação Digital</h2>
+      <p>Oficinas de tecnologia para jovens. Meta 2025: 500 alunos.</p>
+    </section>
+
+    <section aria-labelledby="p2">
+      <h2 id="p2">Projeto 2 — Alimentação Solidária</h2>
+      <p>Cestas e educação alimentar. Meta 2025: 2.000 famílias.</p>
+    </section>
+
+    <section aria-labelledby="p3">
+      <h2 id="p3">Como ajudar</h2>
+      <ul>
+        <li><a href="cadastro.html">Seja voluntário</a></li>
+        <li><a href="#" rel="noopener">Doar on-line</a></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="container" role="contentinfo">
+    <p>&copy; <span id="ano">2025</span> — [ONG].</p>
+  </footer>
+  <script>document.getElementById('ano').textContent = new Date().getFullYear();</script>
+</body>
+</html>
