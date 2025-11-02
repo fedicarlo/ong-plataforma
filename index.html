@@ -4,21 +4,37 @@
   <meta charset="utf-8">
   <title>[ONG] — Missão, Projetos e Transparência</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="[ONG] atua em [causa] com projetos de impacto social. Participe: voluntariado e doações.">
+  <meta name="description" content="[ONG] atua em [causa] com projetos de impacto social.">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
   <a class="skip" href="#conteudo">Pular para o conteúdo</a>
 
   <header role="banner">
     <div class="topbar container">
-      <img src="assets/icons/logo.svg" alt="Logotipo da ONG" width="32" height="32">
-      <strong>[ONG]</strong>
-      <nav aria-label="Navegação principal">
-        <a href="index.html" aria-current="page">Início</a>
-        <a href="projetos.html">Projetos</a>
-        <a href="cadastro.html">Cadastro</a>
+      <div class="brand">
+        <img class="logo" src="assets/icons/logo.svg" alt="Logotipo da ONG" width="32" height="32">
+        <span>[ONG]</span>
+      </div>
+
+      <button class="nav-toggle" aria-label="Abrir menu" onclick="document.querySelector('.nav').classList.toggle('active')">☰</button>
+
+      <nav class="nav" aria-label="Navegação principal">
+        <ul class="menu">
+          <li><a href="index.html" aria-current="page">Início</a></li>
+          <li class="has-sub">
+            <button class="menu-link" aria-haspopup="true" aria-expanded="false" onclick="this.parentElement.classList.toggle('open')">Projetos ▾</button>
+            <ul class="submenu" role="menu">
+              <li><a role="menuitem" href="projetos.html#p1">Educação Digital</a></li>
+              <li><a role="menuitem" href="projetos.html#p2">Alimentação Solidária</a></li>
+            </ul>
+          </li>
+          <li><a href="projetos.html">Projetos</a></li>
+          <li><a href="cadastro.html">Cadastro</a></li>
+        </ul>
       </nav>
     </div>
+
     <section class="hero" aria-label="Destaque">
       <picture>
         <source srcset="assets/img/hero.webp" type="image/webp">
@@ -27,6 +43,10 @@
       <div class="container">
         <h1>Missão, Visão e Valores</h1>
         <p>Atuamos desde [ANO] em [CAUSA], promovendo impacto mensurável por meio de projetos em [áreas].</p>
+        <div style="margin-top:16px; display:flex; gap:12px; flex-wrap:wrap;">
+          <a class="btn btn-primary" href="projetos.html">Conhecer projetos</a>
+          <a class="btn btn-outline" href="cadastro.html">Quero participar</a>
+        </div>
       </div>
     </section>
   </header>
@@ -34,30 +54,26 @@
   <main id="conteudo" class="container" role="main">
     <section aria-labelledby="sobre">
       <h2 id="sobre">Sobre a organização</h2>
-      <article>
-        <h3>Histórico e conquistas</h3>
-        <p>Desde [ANO], alcançamos [número] beneficiários diretos e [número] indiretos.</p>
-      </article>
-      <article>
-        <h3>Transparência</h3>
-        <ul>
-          <li><a href="#" rel="noopener">Relatório Anual (PDF)</a></li>
-          <li><a href="#" rel="noopener">Demonstrações Financeiras (PDF)</a></li>
-        </ul>
-      </article>
+      <div class="grid grid-md-2">
+        <article class="card">
+          <h3>Histórico e conquistas</h3>
+          <p>Desde [ANO], alcançamos [número] beneficiários diretos e [número] indiretos.</p>
+        </article>
+        <article class="card">
+          <h3>Transparência</h3>
+          <ul>
+            <li><a href="#" rel="noopener">Relatório Anual (PDF)</a></li>
+            <li><a href="#" rel="noopener">Demonstrações Financeiras (PDF)</a></li>
+          </ul>
+        </article>
+      </div>
     </section>
 
-    <section aria-labelledby="contato">
-      <h2 id="contato">Contato</h2>
-      <address>
-        <p><strong>E-mail:</strong> <a href="mailto:contato@ong.org.br">contato@ong.org.br</a></p>
-        <p><strong>Telefone:</strong> <a href="tel:+550000000000">(00) 00000-0000</a></p>
-      </address>
-    </section>
+    <div class="alert ok"><strong>Sucesso:</strong> site estilizado para a Entrega II.</div>
   </main>
 
-  <footer role="contentinfo" class="container">
-    <p>&copy; <span id="ano">2025</span> — [ONG].</p>
+  <footer role="contentinfo">
+    <div class="container"><p>&copy; <span id="ano">2025</span> — [ONG].</p></div>
   </footer>
   <script>document.getElementById('ano').textContent = new Date().getFullYear();</script>
 </body>

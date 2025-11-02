@@ -4,31 +4,36 @@
   <meta charset="utf-8">
   <title>Cadastro — [ONG]</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Cadastre-se para voluntariado, doações ou newsletter.">
+  <meta name="description" content="Cadastre-se para participar.">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <header class="container" role="banner">
-    <div style="display:flex; align-items:center; gap:.75rem;">
-      <img src="assets/icons/logo.svg" alt="Logotipo da ONG" width="28" height="28">
-      <strong>[ONG]</strong>
+  <header role="banner">
+    <div class="topbar container">
+      <div class="brand">
+        <img class="logo" src="assets/icons/logo.svg" alt="Logotipo da ONG" width="32" height="32">
+        <span>[ONG]</span>
+      </div>
+      <button class="nav-toggle" aria-label="Abrir menu" onclick="document.querySelector('.nav').classList.toggle('active')">☰</button>
+      <nav class="nav" aria-label="Navegação principal">
+        <ul class="menu">
+          <li><a href="index.html">Início</a></li>
+          <li class="has-sub">
+            <button class="menu-link" onclick="this.parentElement.classList.toggle('open')">Projetos ▾</button>
+            <ul class="submenu">
+              <li><a href="projetos.html#p1">Educação Digital</a></li>
+              <li><a href="projetos.html#p2">Alimentação Solidária</a></li>
+            </ul>
+          </li>
+          <li><a href="projetos.html">Projetos</a></li>
+          <li><a href="cadastro.html" aria-current="page">Cadastro</a></li>
+        </ul>
+      </nav>
     </div>
-    <nav aria-label="Navegação principal">
-      <a href="index.html">Início</a>
-      <a href="projetos.html">Projetos</a>
-      <a href="cadastro.html" aria-current="page">Cadastro</a>
-    </nav>
-    <section aria-label="Imagem de capa do cadastro">
-      <picture>
-        <source srcset="assets/img/voluntariado.webp" type="image/webp">
-        <img src="assets/img/voluntariado.jpg" alt="Pessoas colaborando em projeto social" loading="lazy" decoding="async">
-      </picture>
-    </section>
   </header>
 
   <main id="conteudo" class="container" role="main">
     <h1>Cadastro</h1>
-    <p>Preencha seus dados para participar.</p>
-
     <form action="#" method="post" novalidate aria-describedby="msg" id="formCadastro">
       <div id="msg" class="sr-only" aria-live="polite"></div>
 
@@ -37,12 +42,12 @@
         <label for="nome">Nome completo *</label>
         <input id="nome" name="nome" type="text" required autocomplete="name" placeholder="Ex.: Maria da Silva">
 
-        <div class="row row-2">
-          <div>
+        <div class="grid grid-12">
+          <div class="col-span-12 col-md-6">
             <label for="email">E-mail *</label>
             <input id="email" name="email" type="email" required autocomplete="email" placeholder="voce@exemplo.com">
           </div>
-          <div>
+          <div class="col-span-12 col-md-6">
             <label for="telefone">Telefone (WhatsApp) *</label>
             <input id="telefone" name="telefone" type="tel" required inputmode="tel"
                    placeholder="(11) 98888-7777"
@@ -51,15 +56,15 @@
           </div>
         </div>
 
-        <div class="row row-2">
-          <div>
+        <div class="grid grid-12">
+          <div class="col-span-12 col-md-6">
             <label for="cpf">CPF *</label>
             <input id="cpf" name="cpf" type="text" required inputmode="numeric"
                    placeholder="000.000.000-00"
                    pattern="^\\d{3}\\.\\d{3}\\.\\d{3}-\\d{2}$"
                    title="Use o formato 000.000.000-00">
           </div>
-          <div>
+          <div class="col-span-12 col-md-6">
             <label for="nascimento">Data de nascimento *</label>
             <input id="nascimento" name="nascimento" type="date" required autocomplete="bday">
           </div>
@@ -68,21 +73,19 @@
 
       <fieldset>
         <legend>Endereço</legend>
-        <div class="row row-2">
-          <div>
+        <div class="grid grid-12">
+          <div class="col-span-12 col-md-4">
             <label for="cep">CEP *</label>
             <input id="cep" name="cep" type="text" required inputmode="numeric"
                    placeholder="00000-000"
                    pattern="^\\d{5}-\\d{3}$"
                    title="Use o formato 00000-000">
           </div>
-          <div>
+          <div class="col-span-12 col-md-4">
             <label for="cidade">Cidade *</label>
             <input id="cidade" name="cidade" type="text" required autocomplete="address-level2">
           </div>
-        </div>
-        <div class="row row-2">
-          <div>
+          <div class="col-span-12 col-md-4">
             <label for="estado">Estado (UF) *</label>
             <select id="estado" name="estado" required autocomplete="address-level1">
               <option value="" selected disabled>Selecione</option>
@@ -95,11 +98,10 @@
               <option>SP</option><option>SE</option><option>TO</option>
             </select>
           </div>
-          <div>
-            <label for="endereco">Endereço *</label>
-            <input id="endereco" name="endereco" type="text" required autocomplete="street-address" placeholder="Rua, número, complemento">
-          </div>
         </div>
+
+        <label for="endereco">Endereço *</label>
+        <input id="endereco" name="endereco" type="text" required autocomplete="street-address" placeholder="Rua, número, complemento">
       </fieldset>
 
       <fieldset>
@@ -115,73 +117,17 @@
       </fieldset>
 
       <div class="actions">
-        <button type="submit">Enviar cadastro</button>
-        <button type="reset">Limpar</button>
+        <button class="btn btn-primary" type="submit">Enviar cadastro</button>
+        <button class="btn btn-outline" type="reset">Limpar</button>
       </div>
-
-      <p id="msgErro" class="error" aria-live="polite"></p>
+      <p id="msgErro" class="hint" aria-live="polite"></p>
     </form>
   </main>
 
-  <footer class="container" role="contentinfo">
-    <p>&copy; <span id="ano">2025</span> — [ONG].</p>
+  <footer role="contentinfo">
+    <div class="container"><p>&copy; <span id="ano">2025</span> — [ONG].</p></div>
   </footer>
 
-  <script>
-    // ano dinâmico
-    document.getElementById('ano').textContent = new Date().getFullYear();
-
-    // Máscaras simples
-    const tel = document.getElementById('telefone');
-    const cpf = document.getElementById('cpf');
-    const cep = document.getElementById('cep');
-    const form = document.getElementById('formCadastro');
-    const msgErro = document.getElementById('msgErro');
-
-    function mask(value, pattern) {
-      let i = 0;
-      const v = value.replace(/\\D/g, '');
-      return pattern.replace(/#/g, _ => v[i++] ?? '');
-    }
-
-    tel.addEventListener('input', () => {
-      const digits = tel.value.replace(/\\D/g,'');
-      const pat = digits.length > 10 ? '(##) #####-####' : '(##) ####-####';
-      tel.value = mask(tel.value, pat).trim();
-    });
-
-    cpf.addEventListener('input', () => {
-      cpf.value = mask(cpf.value, '###.###.###-##').trim();
-    });
-
-    cep.addEventListener('input', () => {
-      cep.value = mask(cep.value, '#####-###').trim();
-    });
-
-    form.addEventListener('submit', (e) => {
-      msgErro.textContent = '';
-      if (!form.checkValidity()) {
-        e.preventDefault();
-        const firstInvalid = form.querySelector(':invalid');
-        firstInvalid?.focus();
-        msgErro.textContent = 'Por favor, corrija os campos destacados e tente novamente.';
-      }
-    });
-  </script>
-
-  <style>
-    /* CSS mínimo só para visualização nesta Entrega I */
-    :root { --max: 1120px; }
-    body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; line-height: 1.5; margin:0; }
-    .container { max-width: var(--max); margin: 0 auto; padding: 1rem; }
-    nav a { margin-right: 1rem; text-decoration: none; }
-    .row { display:grid; gap:.75rem; }
-    @media (min-width: 720px) { .row-2 { grid-template-columns: 1fr 1fr; } }
-    fieldset { border:1px solid #ddd; border-radius:.5rem; padding:1rem; margin-bottom:1rem; }
-    input, select { width:100%; padding:.6rem; border:1px solid #ccc; border-radius:.4rem; }
-    .actions { display:flex; gap:.75rem; flex-wrap:wrap; }
-    .error { color:#b00020; }
-    .sr-only { position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); border:0; }
-  </style>
+  <script>document.getElementById('ano').textContent = new Date().getFullYear();</script>
 </body>
 </html>
