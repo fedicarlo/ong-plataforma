@@ -2,17 +2,17 @@
 <html lang="pt-BR">
 <head>
   <meta charset="utf-8">
-  <title>Cadastro — [ONG]</title>
+  <title>Cadastro — Pontes para a Paz</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Cadastre-se para participar.">
+  <meta name="description" content="Cadastre-se para voluntariado, doação recorrente ou receber informativos.">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
   <header role="banner">
     <div class="topbar container">
       <div class="brand">
-        <img class="logo" src="assets/icons/logo.svg" alt="Logotipo da ONG" width="32" height="32">
-        <span>[ONG]</span>
+        <img class="logo" src="assets/icons/logo.svg" alt="Logotipo Pontes para a Paz" width="32" height="32">
+        <span>Pontes para a Paz</span>
       </div>
       <button class="nav-toggle" aria-label="Abrir menu" onclick="document.querySelector('.nav').classList.toggle('active')">☰</button>
       <nav class="nav" aria-label="Navegação principal">
@@ -21,8 +21,10 @@
           <li class="has-sub">
             <button class="menu-link" onclick="this.parentElement.classList.toggle('open')">Projetos ▾</button>
             <ul class="submenu">
-              <li><a href="projetos.html#p1">Educação Digital</a></li>
+              <li><a href="projetos.html#p1">Abrigo & Acolhimento</a></li>
               <li><a href="projetos.html#p2">Alimentação Solidária</a></li>
+              <li><a href="projetos.html#p3">Kits de Inverno</a></li>
+              <li><a href="projetos.html#p4">Reunificação Familiar</a></li>
             </ul>
           </li>
           <li><a href="projetos.html">Projetos</a></li>
@@ -34,6 +36,8 @@
 
   <main id="conteudo" class="container" role="main">
     <h1>Cadastro</h1>
+    <p>Preencha seus dados para participar das ações da <strong>Pontes para a Paz</strong>.</p>
+
     <form action="#" method="post" novalidate aria-describedby="msg" id="formCadastro">
       <div id="msg" class="sr-only" aria-live="polite"></div>
 
@@ -43,11 +47,11 @@
         <input id="nome" name="nome" type="text" required autocomplete="name" placeholder="Ex.: Maria da Silva">
 
         <div class="grid grid-12">
-          <div class="col-span-12 col-md-6">
+          <div class="col-span-12">
             <label for="email">E-mail *</label>
             <input id="email" name="email" type="email" required autocomplete="email" placeholder="voce@exemplo.com">
           </div>
-          <div class="col-span-12 col-md-6">
+          <div class="col-span-12">
             <label for="telefone">Telefone (WhatsApp) *</label>
             <input id="telefone" name="telefone" type="tel" required inputmode="tel"
                    placeholder="(11) 98888-7777"
@@ -57,14 +61,14 @@
         </div>
 
         <div class="grid grid-12">
-          <div class="col-span-12 col-md-6">
+          <div class="col-span-12">
             <label for="cpf">CPF *</label>
             <input id="cpf" name="cpf" type="text" required inputmode="numeric"
                    placeholder="000.000.000-00"
                    pattern="^\\d{3}\\.\\d{3}\\.\\d{3}-\\d{2}$"
                    title="Use o formato 000.000.000-00">
           </div>
-          <div class="col-span-12 col-md-6">
+          <div class="col-span-12">
             <label for="nascimento">Data de nascimento *</label>
             <input id="nascimento" name="nascimento" type="date" required autocomplete="bday">
           </div>
@@ -74,18 +78,18 @@
       <fieldset>
         <legend>Endereço</legend>
         <div class="grid grid-12">
-          <div class="col-span-12 col-md-4">
+          <div class="col-span-12">
             <label for="cep">CEP *</label>
             <input id="cep" name="cep" type="text" required inputmode="numeric"
                    placeholder="00000-000"
                    pattern="^\\d{5}-\\d{3}$"
                    title="Use o formato 00000-000">
           </div>
-          <div class="col-span-12 col-md-4">
+          <div class="col-span-12">
             <label for="cidade">Cidade *</label>
             <input id="cidade" name="cidade" type="text" required autocomplete="address-level2">
           </div>
-          <div class="col-span-12 col-md-4">
+          <div class="col-span-12">
             <label for="estado">Estado (UF) *</label>
             <select id="estado" name="estado" required autocomplete="address-level1">
               <option value="" selected disabled>Selecione</option>
@@ -99,9 +103,6 @@
             </select>
           </div>
         </div>
-
-        <label for="endereco">Endereço *</label>
-        <input id="endereco" name="endereco" type="text" required autocomplete="street-address" placeholder="Rua, número, complemento">
       </fieldset>
 
       <fieldset>
@@ -125,7 +126,7 @@
   </main>
 
   <footer role="contentinfo">
-    <div class="container"><p>&copy; <span id="ano">2025</span> — [ONG].</p></div>
+    <div class="container"><p>&copy; <span id="ano">2025</span> — Pontes para a Paz.</p></div>
   </footer>
 
   <script>document.getElementById('ano').textContent = new Date().getFullYear();</script>

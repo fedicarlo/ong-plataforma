@@ -2,17 +2,17 @@
 <html lang="pt-BR">
 <head>
   <meta charset="utf-8">
-  <title>Projetos — [ONG]</title>
+  <title>Projetos — Pontes para a Paz</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Conheça nossos projetos sociais.">
+  <meta name="description" content="Conheça nossos projetos: abrigo, alimentação solidária, kits de inverno e reunificação familiar.">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
   <header role="banner">
     <div class="topbar container">
       <div class="brand">
-        <img class="logo" src="assets/icons/logo.svg" alt="Logotipo da ONG" width="32" height="32">
-        <span>[ONG]</span>
+        <img class="logo" src="assets/icons/logo.svg" alt="Logotipo Pontes para a Paz" width="32" height="32">
+        <span>Pontes para a Paz</span>
       </div>
       <button class="nav-toggle" aria-label="Abrir menu" onclick="document.querySelector('.nav').classList.toggle('active')">☰</button>
       <nav class="nav" aria-label="Navegação principal">
@@ -21,8 +21,10 @@
           <li class="has-sub">
             <button class="menu-link" onclick="this.parentElement.classList.toggle('open')">Projetos ▾</button>
             <ul class="submenu">
-              <li><a href="#p1">Educação Digital</a></li>
+              <li><a href="#p1">Abrigo & Acolhimento</a></li>
               <li><a href="#p2">Alimentação Solidária</a></li>
+              <li><a href="#p3">Kits de Inverno</a></li>
+              <li><a href="#p4">Reunificação Familiar</a></li>
             </ul>
           </li>
           <li><a href="projetos.html" aria-current="page">Projetos</a></li>
@@ -36,22 +38,34 @@
     <h1>Projetos sociais</h1>
     <div class="cards">
       <article id="p1" class="card">
-        <h3>Educação Digital</h3>
-        <p class="meta">Meta 2025: 500 alunos</p>
-        <p>Oficinas de tecnologia para jovens.</p>
-        <a class="btn btn-primary" href="cadastro.html">Seja voluntário</a>
+        <h3>Abrigo & Acolhimento</h3>
+        <p class="meta">Meta: R$ 80.000 • Arrecadado: R$ 22.500</p>
+        <p>Hospedagem temporária, alimentação básica, transporte e orientação jurídica emergencial.</p>
+        <a class="btn btn-primary" href="cadastro.html">Apoiar</a>
       </article>
       <article id="p2" class="card">
         <h3>Alimentação Solidária</h3>
-        <p class="meta">Meta 2025: 2.000 famílias</p>
-        <p>Cestas básicas e educação alimentar.</p>
-        <a class="btn btn-outline" href="cadastro.html">Apoiar projeto</a>
+        <p class="meta">Meta: R$ 60.000 • Arrecadado: R$ 31.000</p>
+        <p>Cestas, vales e cozinhas comunitárias com prioridade para crianças e idosos.</p>
+        <a class="btn btn-outline" href="cadastro.html">Apoiar</a>
+      </article>
+      <article id="p3" class="card">
+        <h3>Kits de Inverno</h3>
+        <p class="meta">Meta: R$ 45.000 • Arrecadado: R$ 18.200</p>
+        <p>Agasalhos térmicos, cobertores, meias e aquecedores portáteis por família.</p>
+        <a class="btn btn-outline" href="cadastro.html">Apoiar</a>
+      </article>
+      <article id="p4" class="card">
+        <h3>Reunificação Familiar</h3>
+        <p class="meta">Meta: R$ 50.000 • Arrecadado: R$ 12.800</p>
+        <p>Mapeamento e suporte documental/logístico para reaproximar familiares separados.</p>
+        <a class="btn btn-outline" href="cadastro.html">Apoiar</a>
       </article>
     </div>
   </main>
 
   <footer role="contentinfo">
-    <div class="container"><p>&copy; <span id="ano">2025</span> — [ONG].</p></div>
+    <div class="container"><p>&copy; <span id="ano">2025</span> — Pontes para a Paz.</p></div>
   </footer>
   <script>document.getElementById('ano').textContent = new Date().getFullYear();</script>
 </body>

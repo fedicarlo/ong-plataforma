@@ -1,4 +1,10 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
-  <circle cx="50" cy="50" r="48" fill="#0a66c2"/>
-  <text x="50%" y="56%" font-size="42" text-anchor="middle" fill="#fff">O</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" role="img" aria-label="Logo Pontes para a Paz">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0057B7"/>
+      <stop offset="1" stop-color="#FFD700"/>
+    </linearGradient>
+  </defs>
+  <circle cx="50" cy="50" r="48" fill="url(#g)"/>
+  <text x="50" y="58" font-size="38" font-weight="700" text-anchor="middle" fill="#fff" font-family="system-ui, -apple-system, Segoe UI, Roboto">PP</text>
 </svg>

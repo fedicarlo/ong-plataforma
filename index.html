@@ -2,9 +2,9 @@
 <html lang="pt-BR">
 <head>
   <meta charset="utf-8">
-  <title>[ONG] — Missão, Projetos e Transparência</title>
+  <title>Pontes para a Paz — Acolhimento, proteção e reconstrução de vidas</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="[ONG] atua em [causa] com projetos de impacto social.">
+  <meta name="description" content="ONG brasileira que apoia famílias ucranianas afetadas pela guerra com abrigo, alimentação, kits de inverno, reunificação familiar e apoio psicossocial.">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -13,8 +13,8 @@
   <header role="banner">
     <div class="topbar container">
       <div class="brand">
-        <img class="logo" src="assets/icons/logo.svg" alt="Logotipo da ONG" width="32" height="32">
-        <span>[ONG]</span>
+        <img class="logo" src="assets/icons/logo.svg" alt="Logotipo Pontes para a Paz" width="32" height="32">
+        <span>Pontes para a Paz</span>
       </div>
 
       <button class="nav-toggle" aria-label="Abrir menu" onclick="document.querySelector('.nav').classList.toggle('active')">☰</button>
@@ -25,8 +25,10 @@
           <li class="has-sub">
             <button class="menu-link" aria-haspopup="true" aria-expanded="false" onclick="this.parentElement.classList.toggle('open')">Projetos ▾</button>
             <ul class="submenu" role="menu">
-              <li><a role="menuitem" href="projetos.html#p1">Educação Digital</a></li>
+              <li><a role="menuitem" href="projetos.html#p1">Abrigo & Acolhimento</a></li>
               <li><a role="menuitem" href="projetos.html#p2">Alimentação Solidária</a></li>
+              <li><a role="menuitem" href="projetos.html#p3">Kits de Inverno</a></li>
+              <li><a role="menuitem" href="projetos.html#p4">Reunificação Familiar</a></li>
             </ul>
           </li>
           <li><a href="projetos.html">Projetos</a></li>
@@ -38,42 +40,92 @@
     <section class="hero" aria-label="Destaque">
       <picture>
         <source srcset="assets/img/hero.webp" type="image/webp">
-        <img src="assets/img/hero.jpg" alt="Ação comunitária da ONG" loading="eager" decoding="async">
+        <img src="assets/img/hero.jpg" alt="Família refugiada sendo acolhida por voluntários" loading="eager" decoding="async">
       </picture>
       <div class="container">
-        <h1>Missão, Visão e Valores</h1>
-        <p>Atuamos desde [ANO] em [CAUSA], promovendo impacto mensurável por meio de projetos em [áreas].</p>
+        <h1>Acolhimento, proteção e reconstrução de vidas</h1>
+        <p>Mobilizamos recursos e voluntários para amparar famílias ucranianas afetadas pela guerra: abrigo, alimentação, kits de inverno, reunificação familiar e apoio psicossocial.</p>
         <div style="margin-top:16px; display:flex; gap:12px; flex-wrap:wrap;">
-          <a class="btn btn-primary" href="projetos.html">Conhecer projetos</a>
-          <a class="btn btn-outline" href="cadastro.html">Quero participar</a>
+          <a class="btn btn-primary" href="cadastro.html">Seja voluntário(a)</a>
+          <a class="btn btn-outline" href="#doar">Quero doar</a>
         </div>
       </div>
     </section>
   </header>
 
   <main id="conteudo" class="container" role="main">
-    <section aria-labelledby="sobre">
-      <h2 id="sobre">Sobre a organização</h2>
-      <div class="grid grid-md-2">
+    <section aria-labelledby="causas">
+      <h2 id="causas">Nossas frentes de atuação</h2>
+      <div class="cards">
         <article class="card">
-          <h3>Histórico e conquistas</h3>
-          <p>Desde [ANO], alcançamos [número] beneficiários diretos e [número] indiretos.</p>
+          <h3>Abrigo & Acolhimento</h3>
+          <p class="meta">Meta: R$ 80.000 • Arrecadado: R$ 22.500</p>
+          <p>Hospedagem temporária segura, alimentação básica e suporte jurídico emergencial.</p>
+          <a class="btn btn-primary" href="projetos.html#p1">Apoiar</a>
         </article>
         <article class="card">
-          <h3>Transparência</h3>
-          <ul>
-            <li><a href="#" rel="noopener">Relatório Anual (PDF)</a></li>
-            <li><a href="#" rel="noopener">Demonstrações Financeiras (PDF)</a></li>
-          </ul>
+          <h3>Alimentação Solidária</h3>
+          <p class="meta">Meta: R$ 60.000 • Arrecadado: R$ 31.000</p>
+          <p>Cestas, vales-alimentação e cozinhas comunitárias com foco em crianças e idosos.</p>
+          <a class="btn btn-outline" href="projetos.html#p2">Apoiar</a>
+        </article>
+        <article class="card">
+          <h3>Kits de Inverno</h3>
+          <p class="meta">Meta: R$ 45.000 • Arrecadado: R$ 18.200</p>
+          <p>Roupas térmicas, cobertores e itens de aquecimento para famílias em deslocamento.</p>
+          <a class="btn btn-outline" href="projetos.html#p3">Apoiar</a>
         </article>
       </div>
     </section>
 
-    <div class="alert ok"><strong>Sucesso:</strong> site estilizado para a Entrega II.</div>
+    <section aria-labelledby="doacoes" id="doar">
+      <h2 id="doacoes">Últimas doações</h2>
+      <div class="cards">
+        <article class="card"><h3>Anônimo</h3><p class="meta">Agora mesmo</p><p>R$ 250 para Kits de Inverno.</p></article>
+        <article class="card"><h3>Marina S.</h3><p class="meta">Há 3 min</p><p>R$ 120 para Alimentação Solidária.</p></article>
+        <article class="card"><h3>Carlos P.</h3><p class="meta">Há 7 min</p><p>R$ 300 para Abrigo & Acolhimento.</p></article>
+      </div>
+    </section>
+
+    <section aria-labelledby="blog">
+      <h2 id="blog">Do blog</h2>
+      <div class="cards">
+        <article class="card"><h3>Como medimos impacto</h3><p class="meta">01 nov 2025 • Transparência</p><p>KPIs de abrigo, alimentação e reunificação — e como auditamos resultados.</p></article>
+        <article class="card"><h3>Voluntariado responsável</h3><p class="meta">28 out 2025 • Comunidade</p><p>Boas práticas para atuar em contextos de crise.</p></article>
+        <article class="card"><h3>Parcerias que salvam</h3><p class="meta">21 out 2025 • Parcerias</p><p>Como empresas e doadores recorrentes mantêm ações essenciais.</p></article>
+      </div>
+    </section>
+
+    <section aria-labelledby="eventos">
+      <h2 id="eventos">Próximos eventos</h2>
+      <div class="cards">
+        <article class="card">
+          <h3>Campanha de doação</h3>
+          <p class="meta">Sede SP • 10:30–15:30</p>
+          <p>Meta de 500 kits de inverno para famílias recém-chegadas.</p>
+          <a class="btn btn-primary" href="cadastro.html">Quero participar</a>
+        </article>
+        <article class="card">
+          <h3>Mutirão de documentação</h3>
+          <p class="meta">Online • 19:00–21:00</p>
+          <p>Auxílio no preparo de documentos para reunificação familiar.</p>
+          <a class="btn btn-outline" href="cadastro.html">Inscrever-se</a>
+        </article>
+      </div>
+    </section>
+
+    <section class="alert ok">
+      <strong>Transparência:</strong>
+      publicaremos relatórios trimestrais com metas, gastos e resultados.
+    </section>
   </main>
 
   <footer role="contentinfo">
-    <div class="container"><p>&copy; <span id="ano">2025</span> — [ONG].</p></div>
+    <div class="container">
+      <p><strong>Pontes para a Paz</strong> — ONG brasileira de apoio a famílias ucranianas afetadas pela guerra.</p>
+      <p class="meta">Contato: <a href="mailto:contato@pontespaz.org">contato@pontespaz.org</a> • (11) 90000-0000</p>
+      <p>&copy; <span id="ano">2025</span> — Todos os direitos reservados.</p>
+    </div>
   </footer>
   <script>document.getElementById('ano').textContent = new Date().getFullYear();</script>
 </body>
