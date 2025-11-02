@@ -1,29 +1,23 @@
-// router.js — SPA minimalista (hash-based)
+import { Home, Projetos, Projeto, Cadastro, Contato } from "./templates.js";
+import { setupForms } from "./validate.js";
 
-import { Cadastro } from "./templates.js";
-import { initCadastroForm } from "./forms.js";
+const mount = (html) => {
+  document.getElementById("app").innerHTML = html;
+  setupForms();
+};
 
-const mount = () => document.getElementById("app");
-
-function render(html) {
-  const el = mount();
-  if (!el) return;
-  el.innerHTML = html;
-}
-
-function route() {
-  const hash = (location.hash || "").replace(/^#\//, "");
-  // Rotas que o SPA controla
-  if (hash === "cadastro") {
-    render(Cadastro());
-    initCadastroForm();
-    return;
+const handleRoute = () => {
+  const hash = location.hash.replace(/^#\/?/, "");
+  if (!hash || hash === "") return mount(Home());
+  if (hash === "projetos") return mount(Projetos());
+  if (hash === "cadastro") return mount(Cadastro());
+  if (hash === "contato") return mount(Contato());
+  if (hash.startsWith("projeto/")) {
+    const slug = hash.split("/")[1];
+    return mount(Projeto(slug));
   }
-  // Fora das rotas do SPA -> não renderiza nada e mantém seu HTML original
-  render("");
-}
+  return mount(Home());
+};
 
-export function startRouter() {
-  window.addEventListener("hashchange", route);
-  route();
-}
+window.addEventListener("hashchange", handleRoute);
+window.addEventListener("DOMContentLoaded", handleRoute);
