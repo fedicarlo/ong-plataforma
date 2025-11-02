@@ -1,55 +1,153 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ONG Unidas Pela Paz • Início</title>
-  <link rel="stylesheet" href="css/style.css">
-</head>
+<!DOCTYPE html><html lang="pt-BR"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Unidas Pela Paz — Início</title>
+<link rel="stylesheet" href="css/style.css">
+</head><body>
 
-<body>
+<header class="site-header nav-left">
+  <div class="container header-inner">
+    <nav>
+      <ul class="nav-links">
+        <li><a class="active" href="index.html">Início</a></li>
+        <li><a href="projetos.html">Projetos</a></li>
+        <li><a href="cadastro.html">Cadastro</a></li>
+        <li><a href="sobre.html">Sobre</a></li>
+      </ul>
+    </nav>
+    <h1 class="logo"><a href="index.html">Unidas Pela Paz</a></h1>
+  </div>
+</header>
 
-  <header>
-    <div class="container">
-      <nav>
-        <h2>Unidas Pela Paz</h2>
+<main>
 
-        <button class="menu-btn" onclick="toggleMenu()">☰</button>
-
-        <ul>
-          <li><a href="index.html">Início</a></li>
-          <li>
-            <a href="#" class="no-link">Projetos</a>
-            <ul>
-              <li><a href="projetos.html">Apoio psicológico</a></li>
-              <li><a href="projetos.html">Suporte alimentar</a></li>
-            </ul>
-          </li>
-          <li><a href="cadastro.html">Cadastro</a></li>
-        </ul>
-      </nav>
+  <section class="hero hero-overlay" style="background-image:url('assets/images/ukraine-family.jpg')">
+    <div class="container hero-inner">
+      <h2>Ficar parado não é opção — junte-se a nós</h2>
+      <p>Apoio a famílias afetadas pela guerra: alimentação, acolhimento psicológico e atividades infantis.</p>
+      <p><a class="btn" href="cadastro.html">Quero participar</a></p>
     </div>
-  </header>
+  </section>
 
-  <main class="container">
-    <h1>ONG Unidas Pela Paz</h1>
-    <p>Atuamos em apoio a famílias afetadas pela guerra na Ucrânia, promovendo acolhimento, apoio psicológico e ajuda humanitária.</p>
+  <section class="stats container">
+    <article class="stat">
+      <span class="stat-label">Famílias atendidas</span>
+      <span class="stat-number">1.432</span>
+    </article>
+    <article class="stat">
+      <span class="stat-label">Voluntários ativos</span>
+      <span class="stat-number">189</span>
+    </article>
+    <article class="stat">
+      <span class="stat-label">Cidades alcançadas</span>
+      <span class="stat-number">23</span>
+    </article>
+  </section>
 
-    <img src="assets/images/ukraine-family.jpg" alt="Família ucraniana em assistência humanitária">
+  <section class="container section">
+    <header class="section-head">
+      <h2>Nossas causas</h2>
+      <p>Conheça projetos que estão mudando vidas.</p>
+    </header>
 
-    <h2>Missão</h2>
-    <p>Apoiar famílias deslocadas pela guerra, oferecendo estrutura, acolhimento e desenvolvimento social.</p>
+    <section class="cards">
+      <article class="card">
+        <img src="assets/images/alimentos.jpg" alt="Suporte Alimentar">
+        <h3>Suporte Alimentar</h3>
+        <p>Distribuição de kits para famílias em insegurança alimentar.</p>
+        <a class="btn" href="projeto-suporte.html" aria-label="Saiba mais">Saiba mais</a>
+      </article>
 
-    <h2>Contato</h2>
-    <p>Email: contato@unidaspelapaz.org</p>
-    <p>Telefone: +55 (11) 90000-0000</p>
+      <article class="card">
+        <img src="assets/images/psicologico.jpg" alt="Apoio Psicológico">
+        <h3>Apoio Psicológico</h3>
+        <p>Atendimento emocional individual e em grupo com profissionais.</p>
+        <a class="btn" href="projeto-psicologico.html" aria-label="Saiba mais">Saiba mais</a>
+      </article>
 
-  </main>
+      <article class="card">
+        <img src="assets/images/criancas.jpeg" alt="Atividades Infantis">
+        <h3>Atividades Infantis</h3>
+        <p>Recreação, acolhimento e reforço escolar para crianças.</p>
+        <a class="btn" href="projeto-atividades.html" aria-label="Saiba mais">Saiba mais</a>
+      </article>
+    </section>
+  </section>
 
-  <footer>
-    <p>© 2025 Unidas Pela Paz — Todos os direitos reservados</p>
-  </footer>
+  <section class="gallery">
+    <div class="gallery-row">
+      <a class="gallery-item" style="background-image:url('assets/images/alimentos.jpg')" aria-label="Galeria 1"></a>
+      <a class="gallery-item" style="background-image:url('assets/images/psicologico.jpg')" aria-label="Galeria 2"></a>
+      <a class="gallery-item" style="background-image:url('assets/images/criancas.jpeg')" aria-label="Galeria 3"></a>
+      <a class="gallery-item" style="background-image:url('assets/images/ukraine-family.jpg')" aria-label="Galeria 4"></a>
+    </div>
+  </section>
 
-  <script src="menu.js"></script>
-</body>
-</html>
+  <section class="container section">
+    <header class="section-head">
+      <h2>Do blog</h2>
+      <p>Histórias e notícias sobre nossos projetos.</p>
+    </header>
+    <div class="cards cards-3">
+      <article class="card card-blog">
+        <div class="card-cover" style="background-image:url('assets/images/ukraine-family.jpg')"></div>
+        <h3>Como medimos impacto</h3>
+        <p>Indicadores simples e transparentes para prestar contas.</p>
+      </article>
+      <article class="card card-blog">
+        <div class="card-cover" style="background-image:url('assets/images/alimentos.jpg')"></div>
+        <h3>Voluntariado responsável</h3>
+        <p>Dicas para começar a ajudar com propósito e constância.</p>
+      </article>
+      <article class="card card-blog">
+        <div class="card-cover" style="background-image:url('assets/images/psicologico.jpg')"></div>
+        <h3>Transparência nas doações</h3>
+        <p>Para onde vai o dinheiro e como prestamos contas.</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="container section">
+    <header class="section-head">
+      <h2>Próximos eventos</h2>
+    </header>
+    <div class="cards cards-3">
+      <article class="card">
+        <div class="card-cover" style="background-image:url('assets/images/alimentos.jpg')"></div>
+        <h3>Campanha de doação</h3>
+        <p class="meta">10:30–15:30 • Sede</p>
+        <a class="btn" href="cadastro.html">Quero participar</a>
+      </article>
+      <article class="card">
+        <div class="card-cover" style="background-image:url('assets/images/ukraine-family.jpg')"></div>
+        <h3>Mutirão de saúde</h3>
+        <p class="meta">08:00–12:00 • Praça Central</p>
+        <a class="btn" href="cadastro.html">Saiba mais</a>
+      </article>
+      <article class="card">
+        <div class="card-cover" style="background-image:url('assets/images/criancas.jpeg')"></div>
+        <h3>Feira solidária</h3>
+        <p class="meta">09:00–17:00 • Ginásio</p>
+        <a class="btn" href="cadastro.html">Participar</a>
+      </article>
+    </div>
+  </section>
+
+  <section class="container section volunteer">
+    <div class="volunteer-box">
+      <h2>Seja voluntário(a)</h2>
+      <form action="cadastro.html" method="get" class="volunteer-form">
+        <label for="vnome">Seu nome</label>
+        <input id="vnome" name="vnome" type="text" placeholder="Seu nome">
+        <label for="vemail">Seu e-mail</label>
+        <input id="vemail" name="vemail" type="email" placeholder="Seu e-mail">
+        <label for="vmsg">Mensagem</label>
+        <textarea id="vmsg" name="vmsg" rows="3" placeholder="Como deseja ajudar?"></textarea>
+        <button class="btn" type="submit">Enviar</button>
+      </form>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer"><div class="container"><p>© 2025 Unidas Pela Paz</p></div></footer>
+</body></html>

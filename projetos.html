@@ -1,68 +1,69 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Projetos | Unidas Pela Paz</title>
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
-  <header class="topbar">
-    <h1>Unidas Pela Paz</h1>
+
+<header class="site-header nav-right">
+  <div class="container header-inner">
+    <h1 class="logo"><a href="index.html">Unidas Pela Paz</a></h1>
     <nav>
-      <ul>
+      <ul class="nav-links">
         <li><a href="index.html">Início</a></li>
-        <li class="dropdown">
-          <!-- Tornamos o pai não clicável para permitir selecionar o submenu -->
-          <a href="#" class="no-link" aria-haspopup="true" aria-expanded="false">Projetos</a>
-          <ul class="dropdown-menu">
-            <li><a href="#psico">Apoio psicológico</a></li>
-            <li><a href="#alimentar">Suporte alimentar</a></li>
-            <li><a href="#criancas">Atividades infantis</a></li>
-          </ul>
-        </li>
+        <li><a class="active" href="projetos.html">Projetos</a></li>
         <li><a href="cadastro.html">Cadastro</a></li>
+        <li><a href="sobre.html">Sobre</a></li>
       </ul>
     </nav>
-  </header>
+  </div>
+</header>
 
-  <main class="container">
-    <h2>Projetos em andamento</h2>
+<main>
 
-    <section class="cards">
+  <section class="hero">
+    <div class="container">
+      <h2>Nossos Projetos</h2>
+      <p>Conheça as iniciativas que estão mudando vidas.</p>
+    </div>
+  </section>
 
-      <!-- Alimentar -->
-      <article class="card" id="alimentar">
-        <img src="./assets/images/familiaucrania.jpg" alt="Distribuição de alimentos para famílias" />
-        <span class="tag tag-yellow">Famílias</span>
-        <h3>Suporte Alimentar</h3>
-        <p>Distribuição de alimentos para famílias refugiadas.</p>
-        <a class="btn" href="#">Saiba mais</a>
-      </article>
+  <section class="cards container">
 
-      <!-- Psicológico -->
-      <article class="card" id="psico">
-        <img src="./assets/images/psicologico.jpg" alt="Apoio psicológico a afetados pela guerra" />
-        <span class="tag tag-blue">Saúde</span>
-        <h3>Apoio Psicológico</h3>
-        <p>Atendimento emocional a afetados pela guerra.</p>
-        <a class="btn" href="#">Saiba mais</a>
-      </article>
+    <article class="card">
+      <img src="assets/images/alimentos.jpg" alt="Suporte Alimentar" />
+      <h3>Suporte Alimentar</h3>
+      <p>Distribuição de alimentos para refugiados.</p>
+      <a class="btn" href="projeto-suporte.html" aria-label="Saiba mais">Saiba mais</a>
+    </article>
 
-      <!-- Crianças -->
-      <article class="card" id="criancas">
-        <img src="./assets/images/criancas.jpeg" alt="Crianças em atividades de acolhimento" />
-        <span class="tag tag-yellow">Crianças</span>
-        <h3>Atividades Infantis</h3>
-        <p>Recreação e acolhimento para crianças deslocadas.</p>
-        <a class="btn" href="#">Saiba mais</a>
-      </article>
+    <article class="card">
+      <img src="assets/images/psicologico.jpg" alt="Apoio Psicológico" />
+      <h3>Apoio Psicológico</h3>
+      <p>Atendimento emocional especializado.</p>
+      <a class="btn" href="projeto-psicologico.html" aria-label="Saiba mais">Saiba mais</a>
+    </article>
 
-    </section>
-  </main>
+    <article class="card">
+      <img src="assets/images/criancas.jpeg" alt="Atividades Infantis" />
+      <h3>Atividades Infantis</h3>
+      <p>Recreação e reforço escolar para crianças.</p>
+      <a class="btn" href="projeto-atividades.html" aria-label="Saiba mais">Saiba mais</a>
+    </article>
 
-  <footer>
-    <p>© 2025 Unidas Pela Paz — Todos os direitos reservados</p>
-  </footer>
+  </section>
+
+</main>
+
+
+<footer class="site-footer">
+  <div class="container">
+    <p>© 2025 Unidas Pela Paz</p>
+  </div>
+</footer>
+
 </body>
 </html>

@@ -20,3 +20,16 @@
 @media (max-width:480px){
   .col-sm-12{grid-column:span 12}
 }
+
+/* ===== Alinhamento do header por página ===== */
+.header-inner{display:flex;align-items:center;gap:24px}
+.logo{margin:0}
+.nav-links{display:flex;gap:20px;margin:0;padding:0;list-style:none}
+
+/* Menu à esquerda (nav primeiro, logo depois) */
+.nav-left .header-inner nav{order:1;margin-right:auto}
+.nav-left .header-inner .logo{order:2}
+
+/* Menu à direita (logo primeiro, nav depois) */
+.nav-right .header-inner .logo{order:1;margin-right:auto}
+.nav-right .header-inner nav{order:2}
