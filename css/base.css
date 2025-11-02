@@ -14,3 +14,6 @@ small{font-size:var(--font-sm)}
 a{color:inherit}
 .container{width:min(1100px,90%);margin:auto}
 img{max-width:100%;display:block}
+/* --- NAV list reset --- */
+nav ul{list-style:none;margin:0;padding:0}
+nav li{margin:0;padding:0}

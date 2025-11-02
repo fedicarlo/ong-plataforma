@@ -133,3 +133,6 @@
 @media (max-width:480px){
   .gallery-row{grid-template-columns:1fr}
 }
+/* --- HERO tweaks --- */
+.hero{min-height:260px;border-radius:16px;overflow:hidden}
+.hero-inner{max-width:760px;padding:72px 24px}

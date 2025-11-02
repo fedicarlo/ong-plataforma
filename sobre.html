@@ -1,71 +1,50 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Sobre — Unidas Pela Paz</title>
-  <link rel="stylesheet" href="css/style.css" />
-</head>
-<body>
-  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+<!DOCTYPE html><html lang="pt-BR"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Unidas Pela Paz — Sobre</title>
+<link rel="stylesheet" href="css/style.css">
+</head><body>
+<header class="site-header"><div class="container header-inner">
+  <h1 class="logo"><a href="index.html">Unidas Pela Paz</a></h1>
+  <nav><ul class="nav-links">
+    <li><a href="index.html">Início</a></li>
+    <li><a href="projetos.html">Projetos</a></li>
+    <li><a href="cadastro.html">Cadastro</a></li>
+    <li><a class="active" href="sobre.html">Sobre</a></li>
+  </ul></nav>
+</div></header>
 
-  <header class="site-header">
-    <div class="container header-inner">
-      <h1 class="logo"><a href="index.html">Unidas Pela Paz</a></h1>
-      <nav aria-label="principal">
-        <ul class="nav-links">
-          <li><a href="index.html">Início</a></li>
-          <li class="has-submenu">
-            <a href="projetos.html">Projetos</a>
-            <ul class="submenu" aria-label="submenu projetos">
-              <li><a href="projeto-suporte.html">Suporte alimentar</a></li>
-              <li><a href="projeto-psicologico.html">Apoio psicológico</a></li>
-              <li><a href="projeto-atividades.html">Atividades infantis</a></li>
-            </ul>
-          </li>
-          <li><a href="cadastro.html">Cadastro</a></li>
-          <li><a class="active" href="sobre.html">Sobre</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
+<main class="container" style="max-width:920px">
+  <h2>ONG Unidas Pela Paz</h2>
+  <p>Este site foi desenvolvido como <strong>projeto acadêmico</strong> com o objetivo de criar a página institucional de uma ONG fictícia chamada <strong>Unidas Pela Paz</strong>. O foco é demonstrar domínio das tecnologias front-end básicas e a organização de um site completo, responsivo e sem dependência de frameworks.</p>
 
-  <main id="conteudo" class="container" style="max-width: 880px;">
-    <h2>ONG Unidas Pela Paz — Sobre o Projeto</h2>
-    <p>Este site foi desenvolvido como experiência prática da disciplina, criando uma presença institucional para uma ONG fictícia voltada ao apoio a famílias afetadas pela guerra na Ucrânia. O foco é demonstrar domínio de HTML5 semântico, CSS3 responsivo e organização de código.</p>
+  <h3>Funcionalidades</h3>
+  <ul>
+    <li>Página inicial com banner, contadores e destaques de projetos</li>
+    <li>Seção de <strong>causas e campanhas</strong> com cards (projetos)</li>
+    <li>Páginas individuais para cada projeto (suporte, psicológico, atividades)</li>
+    <li>Formulário simples para <strong>cadastro/voluntariado</strong></li>
+    <li>Página <strong>Projetos</strong> listando todas as ações em andamento</li>
+    <li>Página <strong>Sobre</strong> (esta) com descrição do trabalho</li>
+  </ul>
 
-    <section aria-labelledby="funcionalidades">
-      <h3 id="funcionalidades">🧩 Funcionalidades</h3>
-      <ul>
-        <li>Página inicial com informações gerais sobre a ONG</li>
-        <li>Seção de <strong>projetos e campanhas</strong> ativas</li>
-        <li>Página de <strong>doações/engajamento</strong> (via projetos)</li>
-        <li>Formulário de <strong>cadastro</strong> de voluntários</li>
-        <li>Estrutura preparada para galeria e blog (próxima entrega)</li>
-        <li>Design responsivo com tipografia e grid próprios (CSS puro)</li>
-      </ul>
-    </section>
+  <h3>Tecnologias utilizadas</h3>
+  <ul>
+    <li><strong>HTML5</strong></li>
+    <li><strong>CSS3</strong> (arquitetura por módulos: tokens, base, layout, components, menu, forms e responsive)</li>
+    <li><strong>JavaScript</strong> (menu e modal simples)</li>
+    <li>Google Fonts (Manrope)</li>
+    <li>Imagens locais em <code>assets/images</code></li>
+  </ul>
 
-    <section aria-labelledby="tecnologias">
-      <h3 id="tecnologias">🛠️ Tecnologias Utilizadas</h3>
-      <ul>
-        <li>HTML5 (semântica, acessibilidade básica, skip link)</li>
-        <li>CSS3 (tokens, grid de 12 colunas, flexbox, breakpoints)</li>
-        <li>JavaScript ES6 (menu e componentes simples)</li>
-        <li>Google Fonts &amp; SVG (logo ícone)</li>
-      </ul>
-    </section>
+  <h3>Objetivo do projeto</h3>
+  <p>Demonstrar boas práticas de estruturação, semântica, responsividade e organização de estilos, resultando em um site claro, acessível e fácil de manter.</p>
 
-    <section aria-labelledby="objetivo">
-      <h3 id="objetivo">💡 Objetivo do Projeto</h3>
-      <p>Demonstrar domínio das tecnologias front-end básicas e a estruturação de um site completo, seguindo boas práticas de organização, responsividade, estilização e semântica — em um contexto socialmente relevante (terceiro setor).</p>
-    </section>
-  </main>
+  <h3>Como rodar</h3>
+  <ol>
+    <li>Abrir o arquivo <code>index.html</code> no navegador</li>
+    <li>Arquivos organizados em <code>css/</code> e <code>assets/</code></li>
+  </ol>
+</main>
 
-  <footer class="site-footer">
-    <div class="container">
-      <p>© 2025 Unidas Pela Paz — Todos os direitos reservados</p>
-    </div>
-  </footer>
-</body>
-</html>
+<footer class="site-footer"><div class="container"><p>© 2025 Unidas Pela Paz — Todos os direitos reservados</p></div></footer>
+</body></html>

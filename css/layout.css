@@ -33,3 +33,13 @@
 /* Menu à direita (logo primeiro, nav depois) */
 .nav-right .header-inner .logo{order:1;margin-right:auto}
 .nav-right .header-inner nav{order:2}
+/* --- HEADER & NAV (fix) --- */
+.site-header{background:#0b55c7;color:#fff}
+.header-inner{display:flex;align-items:center;justify-content:space-between;gap:24px;padding:12px 0}
+.logo a{color:#fff;text-decoration:none;font-weight:800}
+.nav-links{display:flex;gap:24px;list-style:none;margin:0;padding:0}
+.nav-links a{color:#fff;text-decoration:none;font-weight:600}
+.nav-links a.active,.nav-links a:hover{text-decoration:underline}
+/* alinhamentos opcionais por página */
+.nav-left .header-inner{flex-direction:row-reverse}  /* menu à esquerda, logo à direita */
+.nav-right .header-inner{flex-direction:row}          /* menu à direita, logo à esquerda */
