@@ -1,134 +1,84 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="utf-8">
-  <title>Cadastro — Pontes para a Paz</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Cadastre-se para voluntariado, doação recorrente ou receber informativos.">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ONG Unidas Pela Paz • Cadastro</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
-  <header role="banner">
-    <div class="topbar container">
-      <div class="brand">
-        <img class="logo" src="assets/icons/logo.svg" alt="Logotipo Pontes para a Paz" width="32" height="32">
-        <span>Pontes para a Paz</span>
-      </div>
-      <button class="nav-toggle" aria-label="Abrir menu" onclick="document.querySelector('.nav').classList.toggle('active')">☰</button>
-      <nav class="nav" aria-label="Navegação principal">
-        <ul class="menu">
+
+  <header>
+    <div class="container">
+      <nav>
+        <h2>Unidas Pela Paz</h2>
+
+        <button class="menu-btn" onclick="toggleMenu()">☰</button>
+
+        <ul>
           <li><a href="index.html">Início</a></li>
-          <li class="has-sub">
-            <button class="menu-link" onclick="this.parentElement.classList.toggle('open')">Projetos ▾</button>
-            <ul class="submenu">
-              <li><a href="projetos.html#p1">Abrigo & Acolhimento</a></li>
-              <li><a href="projetos.html#p2">Alimentação Solidária</a></li>
-              <li><a href="projetos.html#p3">Kits de Inverno</a></li>
-              <li><a href="projetos.html#p4">Reunificação Familiar</a></li>
+          <li>
+            <a href="projetos.html">Projetos</a>
+            <ul>
+              <li><a href="projetos.html">Apoio psicológico</a></li>
+              <li><a href="projetos.html">Suporte alimentar</a></li>
             </ul>
           </li>
-          <li><a href="projetos.html">Projetos</a></li>
-          <li><a href="cadastro.html" aria-current="page">Cadastro</a></li>
+          <li><a href="cadastro.html">Cadastro</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
-  <main id="conteudo" class="container" role="main">
-    <h1>Cadastro</h1>
-    <p>Preencha seus dados para participar das ações da <strong>Pontes para a Paz</strong>.</p>
+  <main class="container">
+    <h1>Cadastro de Voluntário</h1>
 
-    <form action="#" method="post" novalidate aria-describedby="msg" id="formCadastro">
-      <div id="msg" class="sr-only" aria-live="polite"></div>
+    <form>
+      <label>Nome Completo</label>
+      <input type="text" name="nome" required>
 
-      <fieldset>
-        <legend>Dados pessoais</legend>
-        <label for="nome">Nome completo *</label>
-        <input id="nome" name="nome" type="text" required autocomplete="name" placeholder="Ex.: Maria da Silva">
+      <label>E-mail</label>
+      <input type="email" name="email" required>
 
-        <div class="grid grid-12">
-          <div class="col-span-12">
-            <label for="email">E-mail *</label>
-            <input id="email" name="email" type="email" required autocomplete="email" placeholder="voce@exemplo.com">
-          </div>
-          <div class="col-span-12">
-            <label for="telefone">Telefone (WhatsApp) *</label>
-            <input id="telefone" name="telefone" type="tel" required inputmode="tel"
-                   placeholder="(11) 98888-7777"
-                   pattern="^\\(\\d{2}\\)\\s?\\d{4,5}-\\d{4}$"
-                   title="Use o formato (11) 98888-7777">
-          </div>
-        </div>
+      <label>CPF</label>
+      <input type="text" name="cpf" required>
 
-        <div class="grid grid-12">
-          <div class="col-span-12">
-            <label for="cpf">CPF *</label>
-            <input id="cpf" name="cpf" type="text" required inputmode="numeric"
-                   placeholder="000.000.000-00"
-                   pattern="^\\d{3}\\.\\d{3}\\.\\d{3}-\\d{2}$"
-                   title="Use o formato 000.000.000-00">
-          </div>
-          <div class="col-span-12">
-            <label for="nascimento">Data de nascimento *</label>
-            <input id="nascimento" name="nascimento" type="date" required autocomplete="bday">
-          </div>
-        </div>
-      </fieldset>
+      <label>Telefone</label>
+      <input type="tel" name="telefone" required>
 
-      <fieldset>
-        <legend>Endereço</legend>
-        <div class="grid grid-12">
-          <div class="col-span-12">
-            <label for="cep">CEP *</label>
-            <input id="cep" name="cep" type="text" required inputmode="numeric"
-                   placeholder="00000-000"
-                   pattern="^\\d{5}-\\d{3}$"
-                   title="Use o formato 00000-000">
-          </div>
-          <div class="col-span-12">
-            <label for="cidade">Cidade *</label>
-            <input id="cidade" name="cidade" type="text" required autocomplete="address-level2">
-          </div>
-          <div class="col-span-12">
-            <label for="estado">Estado (UF) *</label>
-            <select id="estado" name="estado" required autocomplete="address-level1">
-              <option value="" selected disabled>Selecione</option>
-              <option>AC</option><option>AL</option><option>AP</option><option>AM</option>
-              <option>BA</option><option>CE</option><option>DF</option><option>ES</option>
-              <option>GO</option><option>MA</option><option>MT</option><option>MS</option>
-              <option>MG</option><option>PA</option><option>PB</option><option>PR</option>
-              <option>PE</option><option>PI</option><option>RJ</option><option>RN</option>
-              <option>RS</option><option>RO</option><option>RR</option><option>SC</option>
-              <option>SP</option><option>SE</option><option>TO</option>
-            </select>
-          </div>
-        </div>
-      </fieldset>
+      <label>Data de Nascimento</label>
+      <input type="date" name="data_nascimento" required>
 
-      <fieldset>
-        <legend>Interesses</legend>
-        <label for="tipo">Como deseja participar? *</label>
-        <select id="tipo" name="tipo" required>
-          <option value="" selected disabled>Selecione</option>
-          <option>Voluntariado</option>
-          <option>Doação recorrente</option>
-          <option>Doação pontual</option>
-          <option>Newsletter / Informativos</option>
-        </select>
-      </fieldset>
+      <label>Endereço</label>
+      <input type="text" name="endereco" required>
 
-      <div class="actions">
-        <button class="btn btn-primary" type="submit">Enviar cadastro</button>
-        <button class="btn btn-outline" type="reset">Limpar</button>
-      </div>
-      <p id="msgErro" class="hint" aria-live="polite"></p>
+      <label>CEP</label>
+      <input type="text" name="cep" required>
+
+      <label>Cidade</label>
+      <input type="text" name="cidade" required>
+
+      <label>Estado</label>
+      <input type="text" name="estado" required>
+
+      <button class="btn" type="button" onclick="openModal()">Enviar</button>
     </form>
+
+    <div id="modal" class="modal-bg">
+      <div class="modal">
+        <h3>Obrigado!</h3>
+        <p>Cadastro enviado com sucesso.</p>
+        <button class="btn" onclick="closeModal()">Fechar</button>
+      </div>
+    </div>
   </main>
 
-  <footer role="contentinfo">
-    <div class="container"><p>&copy; <span id="ano">2025</span> — Pontes para a Paz.</p></div>
+  <footer>
+    <p>© 2025 Unidas Pela Paz — Todos os direitos reservados</p>
   </footer>
 
-  <script>document.getElementById('ano').textContent = new Date().getFullYear();</script>
+  <script src="menu.js"></script>
+  <script src="modal.js"></script>
 </body>
 </html>

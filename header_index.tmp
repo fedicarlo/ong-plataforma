@@ -1,0 +1,21 @@
+  <header>
+    <div class="container">
+      <nav>
+        <h2>Unidas Pela Paz</h2>
+
+        <button class="menu-btn" onclick="toggleMenu()">☰</button>
+
+        <ul>
+          <li><a href="index.html">Início</a></li>
+          <li>
+            <a href="projetos.html">Projetos</a>
+            <ul>
+              <li><a href="projetos.html">Apoio psicológico</a></li>
+              <li><a href="projetos.html">Suporte alimentar</a></li>
+            </ul>
+          </li>
+          <li><a href="cadastro.html">Cadastro</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
