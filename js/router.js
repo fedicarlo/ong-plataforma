@@ -1,31 +1,29 @@
-import { Home, Projetos, Cadastro, Sobre, ProjetoDetalhe } from "./templates.js";
-import { mount, $ } from "./utils.js";
-import { setupFormVoluntario } from "./forms.js";
+// router.js — SPA minimalista (hash-based)
 
-const routes = [
-  { path: /^#\/?$/, view: Home },
-  { path: /^#\/projetos$/, view: Projetos },
-  { path: /^#\/cadastro$/, view: Cadastro },
-  { path: /^#\/sobre$/, view: Sobre },
-  { path: /^#\/projeto\/(suporte|psicologico|atividades)$/, view: (slug) => ProjetoDetalhe(slug) },
-];
+import { Cadastro } from "./templates.js";
+import { initCadastroForm } from "./forms.js";
 
-function resolve() {
-  const hash = location.hash || "#/";
-  for (const r of routes) {
-    const m = hash.match(r.path);
-    if (m) {
-      const html = r.view(m[1]);
-      mount($("#app"), html);
-      // pós-render
-      setupFormVoluntario();
-      return;
-    }
+const mount = () => document.getElementById("app");
+
+function render(html) {
+  const el = mount();
+  if (!el) return;
+  el.innerHTML = html;
+}
+
+function route() {
+  const hash = (location.hash || "").replace(/^#\//, "");
+  // Rotas que o SPA controla
+  if (hash === "cadastro") {
+    render(Cadastro());
+    initCadastroForm();
+    return;
   }
-  mount($("#app"), "<main class='container section'><p>Página não encontrada.</p></main>");
+  // Fora das rotas do SPA -> não renderiza nada e mantém seu HTML original
+  render("");
 }
 
 export function startRouter() {
-  addEventListener("hashchange", resolve);
-  resolve();
+  window.addEventListener("hashchange", route);
+  route();
 }

@@ -93,3 +93,8 @@ h1,h2,h3{ letter-spacing:.2px; }
 /* =========== MINI UTIL =========== */
 .mt-section{ margin-top:36px; }
 .text-muted{ color:#666; }
+
+/* Feedback simples da validação SPA */
+.input.is-valid, .textarea.is-valid { border-color: #2ecc71; }
+.input.is-invalid, .textarea.is-invalid { border-color: #e74c3c; }
+.form-feedback { margin: 8px 0 12px; font-size: .95rem; color: #e67e22; }
