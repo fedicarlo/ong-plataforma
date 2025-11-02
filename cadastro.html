@@ -5,13 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ONG Unidas Pela Paz • Cadastro</title>
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/menu.css">
 </head>
 
 <body>
 
   <header>
     <div class="container">
-      <nav>
+      <nav class="navbar">
         <h2>Unidas Pela Paz</h2>
 
         <button class="menu-btn" onclick="toggleMenu()">☰</button>
@@ -63,7 +64,9 @@
       <input type="text" name="estado" required>
 
       <button class="btn" type="button" onclick="openModal()">Enviar</button>
-    </form>
+      <label for="mensagem">Mensagem</label>
+  <textarea id="mensagem" name="mensagem" rows="4" placeholder="Como deseja ajudar?" required></textarea>
+</form>
 
     <div id="modal" class="modal-bg">
       <div class="modal">
@@ -80,5 +83,7 @@
 
   <script src="menu.js"></script>
   <script src="modal.js"></script>
+  <script src="menu.js"></script>
+  <script src="js/valida.js"></script>
 </body>
 </html>
