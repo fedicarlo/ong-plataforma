@@ -1,26 +1,5 @@
-/* Mobile */
-@media (max-width: 480px) {
-  nav ul {
-    display: none;
-  }
-}
-
-/* ≥480 */
-@media (min-width: 480px) {
-
-}
-
-/* ≥768 */
-@media (min-width: 768px) {
-
-}
-
-/* ≥1024 */
-@media (min-width: 1024px) {
-
-}
-
-/* ≥1440 */
-@media (min-width: 1440px) {
-
-}
+@media (max-width:480px){ h1{font-size:1.4rem} }
+@media (min-width:480px){ }
+@media (min-width:768px){ }
+@media (min-width:1024px){ }
+@media (min-width:1440px){ }

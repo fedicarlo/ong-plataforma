@@ -1,76 +1,9 @@
-/* ===== MENU DESKTOP ===== */
-
-nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-nav ul {
-  display: flex;
-  gap: var(--space-3);
-}
-
-nav li {
-  list-style: none;
-  position: relative;
-}
-
-nav a {
-  color: white;
-  font-weight: 500;
-}
-
-/* ===== DROPDOWN ===== */
-
-nav li:hover > ul {
-  display: block;
-}
-
-nav li ul {
-  display: none;
-  position: absolute;
-  top: 30px;
-  background: var(--color-primary);
-  padding: var(--space-2);
-  border-radius: var(--radius-sm);
-}
-
-nav li ul li {
-  padding: var(--space-1) 0;
-}
-
-/* ===== MOBILE MENU ===== */
-
-.menu-btn {
-  display: none;
-  cursor: pointer;
-  font-size: var(--font-lg);
-  color: white;
-  background: none;
-  border: none;
-}
-
-@media (max-width: 768px) {
-
-  nav ul {
-    display: none;
-    flex-direction: column;
-    gap: var(--space-2);
-    background: var(--color-primary);
-    padding: var(--space-2);
-    position: absolute;
-    right: 0;
-    top: 60px;
-    width: 180px;
-    border-radius: var(--radius-md);
-  }
-
-  nav ul.active {
-    display: flex;
-  }
-
-  .menu-btn {
-    display: block;
-  }
+.menu-btn{display:none;background:none;border:0;font-size:28px;color:#fff;cursor:pointer}
+nav li{position:relative}
+nav li ul{display:none;position:absolute;top:36px;background:var(--color-primary);padding:10px;border-radius:10px}
+nav li:hover>ul{display:block}
+@media (max-width:768px){
+  .menu-btn{display:block}
+  nav ul{display:none;flex-direction:column;position:absolute;right:0;top:56px;background:var(--color-primary);padding:12px;border-radius:12px;width:220px}
+  nav ul.active{display:flex}
 }
