@@ -1,73 +1,56 @@
-// HOME (agora com hero + indicadores + causas, usando suas imagens em assets/images)
 export const TPL_HOME = `
-<section class="container hero">
-  <div class="hero-text">
-    <h1>Ficar parado não é opção — junte-se a nós</h1>
+<section class="hero hero-overlay" style="background-image:url('assets/images/ukraine-family.jpg')">
+  <div class="container hero-inner">
+    <h2>Ficar parado não é opção — junte-se a nós</h2>
     <p>Apoio a famílias afetadas pela guerra: alimentação, acolhimento psicológico e atividades infantis.</p>
-    <a class="btn primary" href="#/cadastro">Quero participar</a>
-  </div>
-  <div class="hero-media">
-    <img src="assets/images/hero.jpg" alt="Família acolhida pela ONG">
+    <p><a class="btn" href="#/cadastro">Quero participar</a></p>
   </div>
 </section>
 
-<section class="container stats">
-  <div class="stats-grid">
-    <article class="stat-card">
-      <span class="stat-title">Famílias atendidas</span>
-      <strong class="stat-number">1.432</strong>
-    </article>
-    <article class="stat-card">
-      <span class="stat-title">Voluntários ativos</span>
-      <strong class="stat-number">189</strong>
-    </article>
-    <article class="stat-card">
-      <span class="stat-title">Cidades alcançadas</span>
-      <strong class="stat-number">23</strong>
-    </article>
-  </div>
+<section class="stats container">
+  <article class="stat"><span class="stat-label">Famílias atendidas</span><span class="stat-number">1.432</span></article>
+  <article class="stat"><span class="stat-label">Voluntários ativos</span><span class="stat-number">189</span></article>
+  <article class="stat"><span class="stat-label">Cidades alcançadas</span><span class="stat-number">23</span></article>
 </section>
 
-<section class="container causes">
-  <h2 class="section-title">Nossas causas</h2>
-  <div class="cards-grid">
+<section class="container section">
+  <header class="section-head">
+    <h2>Nossas causas</h2>
+    <p>Conheça projetos que estão mudando vidas.</p>
+  </header>
+
+  <section class="cards">
     <article class="card">
-      <img class="card-media" src="assets/images/alimentos.jpg" alt="Distribuição de alimentos">
-      <div class="card-body">
-        <h3>Suporte Alimentar</h3>
-        <p>Distribuição de kits para famílias em insegurança alimentar.</p>
-        <a class="btn" href="#/projetos">Saiba mais</a>
-      </div>
+      <img src="assets/images/alimentos.jpg" alt="Suporte Alimentar">
+      <h3>Suporte Alimentar</h3>
+      <p>Distribuição de kits para famílias em insegurança alimentar.</p>
+      <a class="btn" href="#/projetos" aria-label="Saiba mais">Saiba mais</a>
     </article>
+
     <article class="card">
-      <img class="card-media" src="assets/images/psicologico.jpg" alt="Acolhimento psicológico">
-      <div class="card-body">
-        <h3>Apoio Psicológico</h3>
-        <p>Atendimento emocional individual e em grupo com profissionais.</p>
-        <a class="btn" href="#/projetos">Saiba mais</a>
-      </div>
+      <img src="assets/images/psicologico.jpg" alt="Apoio Psicológico">
+      <h3>Apoio Psicológico</h3>
+      <p>Atendimento emocional individual e em grupo com profissionais.</p>
+      <a class="btn" href="#/projetos" aria-label="Saiba mais">Saiba mais</a>
     </article>
+
     <article class="card">
-      <img class="card-media" src="assets/images/criancas.jpeg" alt="Atividades para crianças">
-      <div class="card-body">
-        <h3>Atividades Infantis</h3>
-        <p>Recreação, acolhimento e reforço escolar para crianças.</p>
-        <a class="btn" href="#/projetos">Saiba mais</a>
-      </div>
+      <img src="assets/images/criancas.jpeg" alt="Atividades Infantis">
+      <h3>Atividades Infantis</h3>
+      <p>Recreação, acolhimento e reforço escolar para crianças.</p>
+      <a class="btn" href="#/projetos" aria-label="Saiba mais">Saiba mais</a>
     </article>
-  </div>
+  </section>
 </section>
 `;
 
-// PROJETOS
 export const TPL_PROJETOS = `
 <section class="container">
   <h1>Projetos sociais</h1>
-  <div id="cardsProjetos" class="cards-grid"></div>
+  <div id="cardsProjetos" class="cards"></div>
 </section>
 `;
 
-// CADASTRO (form só via SPA)
 export const TPL_CADASTRO = `
 <section class="container">
   <h1>Cadastro de Voluntário</h1>
@@ -108,27 +91,7 @@ export const TPL_CADASTRO = `
     </fieldset>
 
     <div id="formMsg" class="sr-only" aria-live="assertive"></div>
-    <button type="submit" class="btn primary">Enviar</button>
+    <button type="submit" class="btn">Enviar</button>
   </form>
-</section>
-`;
-
-// CONTATO (simples para fechar SPA)
-export const TPL_CONTATO = `
-<section class="container">
-  <h1>Contato</h1>
-  <ul class="contact-list">
-    <li><strong>E-mail:</strong> contato@ong.org</li>
-    <li><strong>Telefone:</strong> (11) 99999-9999</li>
-    <li><strong>Endereço:</strong> Av. Solidária, 100 — São Paulo/SP</li>
-  </ul>
-</section>
-`;
-
-// SOBRE (simples)
-export const TPL_SOBRE = `
-<section class="container">
-  <h1>Sobre nós</h1>
-  <p>Atuamos para ampliar oportunidades por meio de educação, alimentação e empregabilidade, com transparência e impacto mensurável.</p>
 </section>
 `;
