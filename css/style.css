@@ -1,6 +1,77 @@
-@import url("tokens.css");
-@import url("base.css");
-@import url("layout.css");
-@import url("components.css");
-@import url("menu.css");
-@import url("responsive.css");
+/* ===============================
+   CSS base — ONG Unidas Pela Paz
+   ENTREGA II
+================================= */
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background: #fff;
+  color: #222;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* HEADER */
+header {
+  background: #f3f3f3;
+  padding: 10px 0;
+  border-bottom: 1px solid #ddd;
+}
+
+header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header ul {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+}
+
+header a {
+  color: #222;
+  text-decoration: none;
+}
+
+header ul ul {
+  display: none;
+}
+
+header li:hover ul {
+  display: block;
+}
+
+img {
+  max-width: 100%;
+  border-radius: 6px;
+}
+
+/* FOOTER */
+footer {
+  margin-top: 60px;
+  text-align: center;
+  padding: 20px;
+  background: #f3f3f3;
+  border-top: 1px solid #ddd;
+}
+
+/* FORM */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 500px;
+}
+
+input {
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
