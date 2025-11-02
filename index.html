@@ -1,19 +1,31 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Unidas Pela Paz</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/base.css">
-  <link rel="stylesheet" href="css/components.css">
-  <link rel="stylesheet" href="css/menu.css">
+  <link rel="stylesheet" href="css/style.css"/>
 </head>
-<body style="font-family:Manrope,system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,'Helvetica Neue',Arial,'Noto Sans',sans-serif">
-  <div id="app"></div>
-  <script type="module" src="js/router.js"></script>
-  <script src="menu.js"></script>
-  <script src="js/valida.js"></script>
+
+<body>
+<header>
+  <nav class="navbar">
+    <a class="logo" href="#/">Unidas Pela Paz</a>
+    <button id="btnMenu" class="hamburger" aria-expanded="false" aria-controls="menu">☰</button>
+    <ul id="menu" class="menu">
+      <li><a href="#/">Início</a></li>
+      <li><a href="#/projetos">Projetos</a></li>
+      <li><a href="#/cadastro">Cadastro</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main id="app" tabindex="-1" aria-live="polite"></main>
+
+<footer class="site-footer">
+  <p>© Unidas Pela Paz — Transparência e impacto social</p>
+</footer>
+
+<script type="module" src="js/router.js"></script>
 </body>
 </html>
