@@ -9,21 +9,9 @@ export const TPL_HOME = `
 </section>
 
 <section class="stat-band container">
-  <article class="stat-tile">
-    <span class="stat-label">Já atendemos</span>
-    <strong class="stat-num">1.432</strong>
-    <span class="stat-foot">famílias</span>
-  </article>
-  <article class="stat-tile">
-    <span class="stat-label">Voluntários ativos</span>
-    <strong class="stat-num">189</strong>
-    <span class="stat-foot">pessoas</span>
-  </article>
-  <article class="stat-tile">
-    <span class="stat-label">Cidades alcançadas</span>
-    <strong class="stat-num">23</strong>
-    <span class="stat-foot">no Brasil</span>
-  </article>
+  <article class="stat-tile"><span class="stat-label">Já atendemos</span><strong class="stat-num">1.432</strong><span class="stat-foot">famílias</span></article>
+  <article class="stat-tile"><span class="stat-label">Voluntários ativos</span><strong class="stat-num">189</strong><span class="stat-foot">pessoas</span></article>
+  <article class="stat-tile"><span class="stat-label">Cidades alcançadas</span><strong class="stat-num">23</strong><span class="stat-foot">no Brasil</span></article>
 </section>
 
 <section class="container section">
@@ -41,7 +29,6 @@ export const TPL_HOME = `
         <a class="btn btn-card" href="#/projetos">Saiba mais</a>
       </div>
     </article>
-
     <article class="card">
       <img src="assets/images/psicologico.jpg" alt="Apoio Psicológico">
       <div class="card-body">
@@ -50,7 +37,6 @@ export const TPL_HOME = `
         <a class="btn btn-card" href="#/projetos">Saiba mais</a>
       </div>
     </article>
-
     <article class="card">
       <img src="assets/images/criancas.jpeg" alt="Atividades Infantis">
       <div class="card-body">

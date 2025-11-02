@@ -9,14 +9,38 @@ const routes = {
   "/cadastro": TPL_CADASTRO,
 };
 
+function setActiveLink(path){
+  document.querySelectorAll('#menu a').forEach(a=>{
+    const target=a.getAttribute('href');
+    a.classList.toggle('active', target===`#${path}`);
+  });
+}
+
 function render(path){
   const app=document.getElementById("app");
   app.innerHTML = routes[path] || routes["/"];
-  app.focus();
+  app.focus({preventScroll:true});
+  window.scrollTo({top:0,behavior:"instant"});
+  setActiveLink(path);
 
+  // Páginas com JS específico
   if(path==="/projetos") seedProjetos();
   if(path==="/cadastro") initCadastro();
 }
+
+// Fallback para clicks em links .html -> converte para hash SPA
+document.addEventListener("click",(e)=>{
+  const a=e.target.closest("a");
+  if(!a) return;
+  const href=a.getAttribute("href")||"";
+  const map={ "index.html":"#/","projetos.html":"#/projetos","cadastro.html":"#/cadastro" };
+  if (href in map){
+    e.preventDefault();
+    location.hash = map[href];
+  }
+  // Links já em hash não recarregam
+  if (href.startsWith("#/")) { e.preventDefault(); location.hash = href; }
+});
 
 function seedProjetos(){
   const el=document.getElementById("cardsProjetos"); if(!el) return;
@@ -26,10 +50,12 @@ function seedProjetos(){
     { titulo:"Oficinas de currículo", cat:"Empregabilidade" },
   ].map(p=>`
     <article class="card">
-      <h3>${p.titulo}</h3>
-      <span class="badge">${p.cat}</span>
-      <p>Impacto e metas com indicadores.</p>
-      <button class="btn">Quero ajudar</button>
+      <div class="card-body">
+        <h3>${p.titulo}</h3>
+        <span class="badge">${p.cat}</span>
+        <p>Impacto e metas com indicadores.</p>
+        <button class="btn btn-card" type="button">Quero ajudar</button>
+      </div>
     </article>`).join("");
 }
 
@@ -49,6 +75,6 @@ function initCadastro(){
   });
 }
 
-function resolvePath(){ const h=location.hash.replace("#",""); return h && routes[h] ? h : "/"; }
+function resolvePath(){ const h=location.hash.replace("#",""); return (h && routes[h]) ? h : "/"; }
 window.addEventListener("hashchange", ()=>render(resolvePath()));
 window.addEventListener("DOMContentLoaded", ()=>render(resolvePath()));
