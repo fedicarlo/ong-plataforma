@@ -1,9 +1,60 @@
-.menu-btn{display:none;background:none;border:0;font-size:28px;color:#fff;cursor:pointer}
-nav li{position:relative}
-nav li ul{display:none;position:absolute;top:36px;background:var(--color-primary);padding:10px;border-radius:10px}
-nav li:hover>ul{display:block}
+/* botão mobile */
+.menu-btn{
+  display:none;
+  background:none;
+  border:0;
+  font-size:28px;
+  color:#fff;
+  cursor:pointer;
+}
+
+/* desktop nav */
+nav li{
+  position:relative;
+}
+nav li ul{
+  display:none;
+  position:absolute;
+  top:100%;
+  left:0;
+  background:var(--color-primary);
+  padding:10px;
+  border-radius:10px;
+  min-width:180px;
+  z-index:50;
+}
+nav li:hover > ul,
+nav li ul:hover{
+  display:block;
+}
+
+nav li ul li{
+  padding:6px 0;
+}
+nav li ul a{
+  color:#fff;
+  font-weight:500;
+}
+
+/* mobile */
 @media (max-width:768px){
-  .menu-btn{display:block}
-  nav ul{display:none;flex-direction:column;position:absolute;right:0;top:56px;background:var(--color-primary);padding:12px;border-radius:12px;width:220px}
-  nav ul.active{display:flex}
+  .menu-btn{display:block;}
+
+  nav ul{
+    display:none;
+    flex-direction:column;
+    position:absolute;
+    right:0;
+    top:56px;
+    background:var(--color-primary);
+    padding:12px;
+    border-radius:12px;
+    width:220px;
+  }
+  nav ul.active{display:flex;}
+
+  nav li ul{
+    position:static;
+    padding:0 0 0 16px;
+  }
 }

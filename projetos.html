@@ -1,72 +1,73 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ONG Unidas Pela Paz • Projetos</title>
-  <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projetos — Unidas Pela Paz</title>
+  <link rel="stylesheet" href="css/style.css" />
 </head>
-
 <body>
 
-  <header>
-    <div class="container">
-      <nav>
-        <h2>Unidas Pela Paz</h2>
-
-        <button class="menu-btn" onclick="toggleMenu()">☰</button>
-
-        <ul>
-          <li><a href="index.html">Início</a></li>
-          <li>
-            <a href="projetos.html">Projetos</a>
-            <ul>
-              <li><a href="projetos.html">Apoio psicológico</a></li>
-              <li><a href="projetos.html">Suporte alimentar</a></li>
-            </ul>
-          </li>
-          <li><a href="cadastro.html">Cadastro</a></li>
-        </ul>
-      </nav>
-    </div>
+  <header class="topbar">
+    <h1>Unidas Pela Paz</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Início</a></li>
+        <li class="dropdown">
+          <a href="#">Projetos</a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Apoio psicológico</a></li>
+            <li><a href="#">Suporte alimentar</a></li>
+          </ul>
+        </li>
+        <li><a href="cadastro.html">Cadastro</a></li>
+      </ul>
+    </nav>
   </header>
 
   <main class="container">
-    <h1>Projetos em andamento</h1>
 
-    <section class="grid grid-12">
+    <h2>Projetos em andamento</h2>
 
-      <article class="card" style="grid-column: span 4;">
-        <img src="assets/images/food-support.jpg" alt="Distribuição de alimentos">
-        <span class="badge yellow">Famílias</span>
+    <section class="cards">
+
+      <!-- CARD 1 -->
+      <article class="card">
+        <img src="assets/images/alimentos.jpg" alt="Distribuição de alimentos" />
+
+        <span class="tag tag-yellow">Famílias</span>
         <h3>Suporte Alimentar</h3>
         <p>Distribuição de alimentos para famílias refugiadas.</p>
-        <button class="btn">Saiba mais</button>
+        <a class="btn" href="#">Saiba mais</a>
       </article>
 
-      <article class="card" style="grid-column: span 4;">
-        <img src="assets/images/psychology.jpg" alt="Apoio psicológico">
-        <span class="badge blue">Saúde</span>
+      <!-- CARD 2 -->
+      <article class="card">
+        <img src="assets/images/psicologico.jpg" alt="Apoio psicológico" />
+
+        <span class="tag tag-blue">Saúde</span>
         <h3>Apoio Psicológico</h3>
         <p>Atendimento emocional a afetados pela guerra.</p>
-        <button class="btn">Saiba mais</button>
+        <a class="btn" href="#">Saiba mais</a>
       </article>
 
-      <article class="card" style="grid-column: span 4;">
-        <img src="assets/images/children.jpg" alt="Crianças em atividade">
-        <span class="badge yellow">Crianças</span>
+      <!-- CARD 3 -->
+      <article class="card">
+        <img src="assets/images/criancas.jpeg" alt="Crianças em atividade" />
+
+        <span class="tag tag-yellow">Crianças</span>
         <h3>Atividades Infantis</h3>
         <p>Recreação e acolhimento para crianças deslocadas.</p>
-        <button class="btn">Saiba mais</button>
+        <a class="btn" href="#">Saiba mais</a>
       </article>
 
     </section>
+
   </main>
 
   <footer>
     <p>© 2025 Unidas Pela Paz — Todos os direitos reservados</p>
   </footer>
 
-  <script src="menu.js"></script>
 </body>
 </html>
