@@ -1,23 +1,24 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Projetos — Unidas Pela Paz</title>
-  <link rel="stylesheet" href="css/style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projetos | Unidas Pela Paz</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-
   <header class="topbar">
     <h1>Unidas Pela Paz</h1>
     <nav>
       <ul>
         <li><a href="index.html">Início</a></li>
         <li class="dropdown">
-          <a href="#">Projetos</a>
+          <!-- Tornamos o pai não clicável para permitir selecionar o submenu -->
+          <a href="#" class="no-link" aria-haspopup="true" aria-expanded="false">Projetos</a>
           <ul class="dropdown-menu">
-            <li><a href="#">Apoio psicológico</a></li>
-            <li><a href="#">Suporte alimentar</a></li>
+            <li><a href="#psico">Apoio psicológico</a></li>
+            <li><a href="#alimentar">Suporte alimentar</a></li>
+            <li><a href="#criancas">Atividades infantis</a></li>
           </ul>
         </li>
         <li><a href="cadastro.html">Cadastro</a></li>
@@ -26,35 +27,31 @@
   </header>
 
   <main class="container">
-
     <h2>Projetos em andamento</h2>
 
     <section class="cards">
 
-      <!-- CARD 1 -->
-      <article class="card">
-        <img src="assets/images/alimentos.jpg" alt="Distribuição de alimentos" />
-
+      <!-- Alimentar -->
+      <article class="card" id="alimentar">
+        <img src="./assets/images/familiaucrania.jpg" alt="Distribuição de alimentos para famílias" />
         <span class="tag tag-yellow">Famílias</span>
         <h3>Suporte Alimentar</h3>
         <p>Distribuição de alimentos para famílias refugiadas.</p>
         <a class="btn" href="#">Saiba mais</a>
       </article>
 
-      <!-- CARD 2 -->
-      <article class="card">
-        <img src="assets/images/psicologico.jpg" alt="Apoio psicológico" />
-
+      <!-- Psicológico -->
+      <article class="card" id="psico">
+        <img src="./assets/images/psicologico.jpg" alt="Apoio psicológico a afetados pela guerra" />
         <span class="tag tag-blue">Saúde</span>
         <h3>Apoio Psicológico</h3>
         <p>Atendimento emocional a afetados pela guerra.</p>
         <a class="btn" href="#">Saiba mais</a>
       </article>
 
-      <!-- CARD 3 -->
-      <article class="card">
-        <img src="assets/images/criancas.jpeg" alt="Crianças em atividade" />
-
+      <!-- Crianças -->
+      <article class="card" id="criancas">
+        <img src="./assets/images/criancas.jpeg" alt="Crianças em atividades de acolhimento" />
         <span class="tag tag-yellow">Crianças</span>
         <h3>Atividades Infantis</h3>
         <p>Recreação e acolhimento para crianças deslocadas.</p>
@@ -62,12 +59,10 @@
       </article>
 
     </section>
-
   </main>
 
   <footer>
     <p>© 2025 Unidas Pela Paz — Todos os direitos reservados</p>
   </footer>
-
 </body>
 </html>

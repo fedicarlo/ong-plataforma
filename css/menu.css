@@ -1,60 +1,27 @@
-/* botão mobile */
-.menu-btn{
-  display:none;
-  background:none;
-  border:0;
-  font-size:28px;
-  color:#fff;
-  cursor:pointer;
+.topbar{
+  display:flex;justify-content:space-between;align-items:center;
+  background:#0059d6;color:#fff;padding:14px 24px
 }
+.topbar h1{font-size:1.25rem;color:#fff;margin:0}
+.topbar nav ul{list-style:none;display:flex;gap:24px;margin:0;padding:0}
+.topbar nav a{text-decoration:none;color:#fff;font-weight:600}
 
-/* desktop nav */
-nav li{
-  position:relative;
+/* Dropdown */
+.dropdown{position:relative}
+.dropdown > .no-link{cursor:default;pointer-events:auto} /* não navega */
+.dropdown-menu{
+  display:none;position:absolute;left:0;top:100%;
+  margin-top:8px;background:#0059d6;border-radius:10px;
+  padding:10px;min-width:180px;z-index:50
 }
-nav li ul{
-  display:none;
-  position:absolute;
-  top:100%;
-  left:0;
-  background:var(--color-primary);
-  padding:10px;
-  border-radius:10px;
-  min-width:180px;
-  z-index:50;
-}
-nav li:hover > ul,
-nav li ul:hover{
-  display:block;
-}
+.dropdown-menu li{list-style:none}
+.dropdown-menu a{display:block;color:#fff;padding:6px 10px;border-radius:6px}
+.dropdown-menu a:hover{background:rgba(255,255,255,.12)}
+/* mantém aberto ao focar/hover */
+.dropdown:hover .dropdown-menu,
+.dropdown:focus-within .dropdown-menu{display:block}
 
-nav li ul li{
-  padding:6px 0;
-}
-nav li ul a{
-  color:#fff;
-  font-weight:500;
-}
-
-/* mobile */
+/* Mobile básico */
 @media (max-width:768px){
-  .menu-btn{display:block;}
-
-  nav ul{
-    display:none;
-    flex-direction:column;
-    position:absolute;
-    right:0;
-    top:56px;
-    background:var(--color-primary);
-    padding:12px;
-    border-radius:12px;
-    width:220px;
-  }
-  nav ul.active{display:flex;}
-
-  nav li ul{
-    position:static;
-    padding:0 0 0 16px;
-  }
+  .topbar nav ul{gap:14px}
 }
