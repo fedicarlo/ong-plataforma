@@ -272,3 +272,69 @@ header{background:#ffffff;border-bottom:1px solid #eaeaea;position:sticky;top:0;
   .stat-band,.cards{grid-template-columns:1fr}
   .stat-band{margin-top:-28px}
 }
+/* ===== Overrides SPA – Hero e Stat Band sobrepostos ===== */
+.hero-full{
+  position: relative;
+  min-height: 62vh;
+  background-size: cover;
+  background-position: center;
+  display: grid;
+  place-items: center;
+}
+.hero-overlay{
+  position:absolute; inset:0;
+  background: linear-gradient(180deg, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0.45) 35%, rgba(0,0,0,0.35) 100%);
+  z-index: 1;
+}
+.hero-content{
+  position: relative; z-index: 2; text-align: left;
+  width: min(1100px, 92%); margin: 0 auto;
+}
+.hero-content h1{
+  color:#fff; font-weight: 800; line-height:1.15; font-size: clamp(28px, 4vw, 48px);
+}
+.hero-content p{ color:#e7e7e7; max-width: 640px; }
+.btn-hero{ background:#1a73e8; color:#fff; border-radius:10px; padding:12px 18px; display:inline-block; }
+
+/* Coloca a faixa de estatísticas sobre o hero */
+.stat-band{
+  position: relative;
+  z-index: 3;
+  display: grid; grid-template-columns: repeat(3, 1fr); gap:16px;
+  width:min(1100px,92%); margin: -60px auto 24px; /* sobe por cima do banner */
+}
+.stat-tile{
+  background: linear-gradient(145deg,#ff8a00,#ffb248);
+  border-radius:14px; padding:18px 20px;
+  box-shadow: 0 12px 24px rgba(0,0,0,.18);
+}
+.stat-tile .stat-label{ color:#fff; font-weight:700; display:block; opacity:.95; }
+.stat-tile .stat-num{ color:#fff; font-weight:800; font-size: clamp(20px, 3vw, 28px); display:block; }
+.stat-tile .stat-foot{ color:#fff; opacity:.95; }
+
+@media (max-width: 780px){
+  .stat-band{ grid-template-columns:1fr; margin-top:-40px; }
+}
+
+/* ===== Cadastro – alinhamento e hierarquia ===== */
+.container-narrow{ width:min(820px, 92%); margin: 32px auto; }
+.form-stacked{ display:grid; gap: 18px; }
+.form-stacked fieldset{ border:1px solid #eee; border-radius:10px; padding:14px; background:#fff; }
+.form-stacked legend{ font-weight:700; color:#111; padding:0 6px; }
+.form-stacked label{ font-size:.92rem; color:#222; font-weight:600; margin-top:8px; display:block; }
+.form-stacked input,
+.form-stacked textarea{
+  width:100%; border:1px solid #dcdcdc; border-radius:8px; padding:10px 12px; outline: none;
+  background:#fff; font: inherit;
+}
+.form-stacked input:focus,
+.form-stacked textarea:focus{ border-color:#1a73e8; box-shadow:0 0 0 3px rgba(26,115,232,.15); }
+.is-invalid{ border-color:#d93025 !important; box-shadow:0 0 0 3px rgba(217,48,37,.12) !important; }
+.btn-block{ width:100%; }
+.btn-primary{ background:#1a73e8; color:#fff; }
+
+/* ===== Cards – títulos brancos quando sobre imagem ===== */
+.card img + .card-body h3{ color:#fff; font-weight:800; text-shadow: 0 2px 10px rgba(0,0,0,.35); }
+/* Caso seu card tenha fundo branco, garantimos cor padrão */
+.card .card-body{ position:relative; margin-top:-64px; padding:12px; border-radius:12px; background: linear-gradient(180deg, rgba(0,0,0,0.25), rgba(0,0,0,.65)); color:#fff; }
+.card .btn-card{ background:#ffffff; color:#222; }

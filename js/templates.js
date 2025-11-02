@@ -57,46 +57,52 @@ export const TPL_PROJETOS = `
 `;
 
 export const TPL_CADASTRO = `
-<section class="container">
+<section class="container container-narrow">
   <h1>Cadastro de Voluntário</h1>
-  <form id="formCadastro" novalidate>
+  <form id="formCadastro" class="form-stacked" novalidate>
     <fieldset>
       <legend>Dados pessoais</legend>
-      <label>Nome Completo
-        <input id="nome" name="nome" type="text" required minlength="3" autocomplete="name">
-      </label>
-      <label>E-mail
-        <input id="email" name="email" type="email" required autocomplete="email" inputmode="email">
-      </label>
-      <label>CPF
-        <input id="cpf" name="cpf" type="text" required maxlength="14" inputmode="numeric" placeholder="000.000.000-00">
-      </label>
-      <label>Telefone
-        <input id="telefone" name="telefone" type="tel" required maxlength="15" inputmode="tel" placeholder="(00) 00000-0000">
-      </label>
-      <label>Data de Nascimento
-        <input id="nascimento" name="nascimento" type="date" required>
-      </label>
+
+      <label for="nome">Nome Completo</label>
+      <input id="nome" name="nome" type="text" required minlength="3" autocomplete="name"/>
+
+      <label for="email">E-mail</label>
+      <input id="email" name="email" type="email" required autocomplete="email" inputmode="email"/>
+
+      <label for="cpf">CPF</label>
+      <input id="cpf" name="cpf" type="text" required maxlength="14" inputmode="numeric" placeholder="000.000.000-00"/>
+
+      <label for="telefone">Telefone</label>
+      <input id="telefone" name="telefone" type="tel" required maxlength="15" inputmode="tel" placeholder="(00) 00000-0000"/>
+
+      <label for="nascimento">Data de Nascimento</label>
+      <input id="nascimento" name="nascimento" type="date" required/>
     </fieldset>
 
     <fieldset>
       <legend>Endereço</legend>
-      <label>CEP
-        <input id="cep" name="cep" type="text" required maxlength="9" inputmode="numeric" placeholder="00000-000">
-      </label>
-      <label>Endereço
-        <input id="endereco" name="endereco" type="text" required autocomplete="address-line1">
-      </label>
-      <label>Cidade
-        <input id="cidade" name="cidade" type="text" required autocomplete="address-level2">
-      </label>
-      <label>Estado
-        <input id="estado" name="estado" type="text" required maxlength="2" placeholder="UF" autocomplete="address-level1">
-      </label>
+
+      <label for="cep">CEP</label>
+      <input id="cep" name="cep" type="text" required maxlength="9" inputmode="numeric" placeholder="00000-000"/>
+
+      <label for="endereco">Endereço</label>
+      <input id="endereco" name="endereco" type="text" required autocomplete="address-line1"/>
+
+      <label for="cidade">Cidade</label>
+      <input id="cidade" name="cidade" type="text" required autocomplete="address-level2"/>
+
+      <label for="estado">Estado</label>
+      <input id="estado" name="estado" type="text" required maxlength="2" placeholder="UF" autocomplete="address-level1"/>
+    </fieldset>
+
+    <fieldset>
+      <legend>Mensagem</legend>
+      <label for="mensagem">Conte como deseja ajudar (opcional)</label>
+      <textarea id="mensagem" name="mensagem" rows="4" placeholder="Ex.: disponibilidade de horários, habilidades, áreas de interesse"></textarea>
     </fieldset>
 
     <div id="formMsg" class="sr-only" aria-live="assertive"></div>
-    <button type="submit" class="btn">Enviar</button>
+    <button type="submit" class="btn btn-primary btn-block">Enviar</button>
   </form>
 </section>
 `;

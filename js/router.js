@@ -3,11 +3,7 @@ import { applyMasks } from "./masks.js";
 import { validateFormCadastro, wireValidationMessages } from "./validators.js";
 import { restoreDraft, persistDraft } from "./storage.js";
 
-const routes = {
-  "/": TPL_HOME,
-  "/projetos": TPL_PROJETOS,
-  "/cadastro": TPL_CADASTRO,
-};
+const routes = { "/": TPL_HOME, "/projetos": TPL_PROJETOS, "/cadastro": TPL_CADASTRO };
 
 function setActiveLink(path){
   document.querySelectorAll('#menu a').forEach(a=>{
@@ -23,22 +19,15 @@ function render(path){
   window.scrollTo({top:0,behavior:"instant"});
   setActiveLink(path);
 
-  // Páginas com JS específico
   if(path==="/projetos") seedProjetos();
   if(path==="/cadastro") initCadastro();
 }
 
-// Fallback para clicks em links .html -> converte para hash SPA
 document.addEventListener("click",(e)=>{
-  const a=e.target.closest("a");
-  if(!a) return;
+  const a=e.target.closest("a"); if(!a) return;
   const href=a.getAttribute("href")||"";
   const map={ "index.html":"#/","projetos.html":"#/projetos","cadastro.html":"#/cadastro" };
-  if (href in map){
-    e.preventDefault();
-    location.hash = map[href];
-  }
-  // Links já em hash não recarregam
+  if (href in map){ e.preventDefault(); location.hash = map[href]; }
   if (href.startsWith("#/")) { e.preventDefault(); location.hash = href; }
 });
 
@@ -50,6 +39,7 @@ function seedProjetos(){
     { titulo:"Oficinas de currículo", cat:"Empregabilidade" },
   ].map(p=>`
     <article class="card">
+      <img src="assets/images/alimentos.jpg" alt="">
       <div class="card-body">
         <h3>${p.titulo}</h3>
         <span class="badge">${p.cat}</span>
