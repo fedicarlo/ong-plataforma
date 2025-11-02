@@ -209,3 +209,66 @@ header{background:#fff;border-bottom:1px solid #eaeaea;position:sticky;top:0;z-i
 @media (max-width: 576px){
   .stats-row,.cards{grid-template-columns:1fr}
 }
+/* ====== UI Overhaul ====== */
+
+/* Container base */
+.container{max-width:1100px;margin:0 auto;padding:0 16px}
+
+/* Navbar limpa */
+header{background:#ffffff;border-bottom:1px solid #eaeaea;position:sticky;top:0;z-index:50}
+.navbar{max-width:1100px;margin:0 auto;padding:10px 16px;display:flex;align-items:center;gap:16px}
+.logo{font-weight:700;color:#111}
+#menu{list-style:none;margin-left:auto;padding:0;display:flex;gap:18px}
+#menu a{display:inline-block;padding:8px 10px;border-radius:8px;color:#111}
+#menu a:hover{background:#f3f4f6}
+
+/* Hero full-bleed com overlay e tipografia legível */
+.hero-full{
+  position:relative;min-height:68vh;display:flex;align-items:center;
+  background-size:cover;background-position:center;
+}
+.hero-full .hero-overlay{
+  position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.45),rgba(0,0,0,.35));
+}
+.hero-full .hero-content{
+  position:relative;text-align:center;color:#fff;padding:24px
+}
+.hero-full h1{font-size:clamp(2rem,3.6vw,3.2rem);line-height:1.2;margin:0 0 12px}
+.hero-full p{max-width:720px;margin:0 auto 18px;color:#eef2f7}
+.brand{color:#ffd28a}
+.btn-hero{background:#1e88e5;border:none}
+.btn-hero:hover{filter:brightness(.95)}
+
+/* Tiles de indicadores sobrepostos ao hero */
+.stat-band{
+  display:grid;grid-template-columns:repeat(3,1fr);gap:16px;
+  margin-top:-40px;margin-bottom:28px;
+}
+.stat-tile{
+  background:linear-gradient(135deg,#ff8a3d,#ffa63e);
+  color:#fff;border-radius:14px;box-shadow:0 8px 20px rgba(0,0,0,.15);
+  padding:18px 20px;text-align:center;
+}
+.stat-label{opacity:.9;display:block}
+.stat-num{font-size:2rem;display:block;line-height:1.1;margin:4px 0}
+.stat-foot{opacity:.9}
+
+/* Cards de causas */
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.card{background:#fff;border:1px solid #eee;border-radius:14px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,.06)}
+.card img{width:100%;height:180px;object-fit:cover;display:block}
+.card-body{padding:14px}
+.btn-card{background:#1e88e5;color:#fff;border:none}
+
+/* Acessibilidade/ajustes SPA */
+#app:focus{outline:none}
+
+/* Responsivo */
+@media (max-width: 992px){
+  .stat-band,.cards{grid-template-columns:1fr 1fr}
+}
+@media (max-width: 576px){
+  .hero-full{min-height:60vh}
+  .stat-band,.cards{grid-template-columns:1fr}
+  .stat-band{margin-top:-28px}
+}

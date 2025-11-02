@@ -1,29 +1,28 @@
 export const TPL_HOME = `
-<section class="hero hero-cover">
-  <div class="container hero__inner">
-    <div class="hero__text">
-      <h1 class="headline">Ficar parado não é opção — junte-se a nós</h1>
-      <p class="subhead">Apoio a famílias afetadas pela guerra: alimentação, acolhimento psicológico e atividades infantis.</p>
-      <a class="btn btn-primary" href="#/cadastro">Quero participar</a>
-    </div>
-    <div class="hero__media">
-      <img src="assets/images/ukraine-family.jpg" alt="Família acolhida pela ONG">
-    </div>
+<section class="hero-full" style="background-image:url('assets/images/ukraine-family.jpg')">
+  <div class="hero-overlay"></div>
+  <div class="container hero-content">
+    <h1>Ficar parado não é uma opção — junte-se à <span class="brand">Unidas Pela Paz</span></h1>
+    <p>Acolhimento, alimentação, apoio psicológico e atividades para crianças. Transparência e impacto real.</p>
+    <a class="btn btn-hero" href="#/cadastro">Quero participar</a>
   </div>
 </section>
 
-<section class="container stats-row">
-  <article class="stat-card">
-    <span class="stat-title">Famílias atendidas</span>
-    <strong class="stat-number">1.432</strong>
+<section class="stat-band container">
+  <article class="stat-tile">
+    <span class="stat-label">Já atendemos</span>
+    <strong class="stat-num">1.432</strong>
+    <span class="stat-foot">famílias</span>
   </article>
-  <article class="stat-card">
-    <span class="stat-title">Voluntários ativos</span>
-    <strong class="stat-number">189</strong>
+  <article class="stat-tile">
+    <span class="stat-label">Voluntários ativos</span>
+    <strong class="stat-num">189</strong>
+    <span class="stat-foot">pessoas</span>
   </article>
-  <article class="stat-card">
-    <span class="stat-title">Cidades alcançadas</span>
-    <strong class="stat-number">23</strong>
+  <article class="stat-tile">
+    <span class="stat-label">Cidades alcançadas</span>
+    <strong class="stat-num">23</strong>
+    <span class="stat-foot">no Brasil</span>
   </article>
 </section>
 
@@ -36,23 +35,29 @@ export const TPL_HOME = `
   <section class="cards">
     <article class="card">
       <img src="assets/images/alimentos.jpg" alt="Suporte Alimentar">
-      <h3>Suporte Alimentar</h3>
-      <p>Distribuição de kits para famílias em insegurança alimentar.</p>
-      <a class="btn" href="#/projetos" aria-label="Saiba mais">Saiba mais</a>
+      <div class="card-body">
+        <h3>Suporte Alimentar</h3>
+        <p>Distribuição de cestas e educação alimentar.</p>
+        <a class="btn btn-card" href="#/projetos">Saiba mais</a>
+      </div>
     </article>
 
     <article class="card">
       <img src="assets/images/psicologico.jpg" alt="Apoio Psicológico">
-      <h3>Apoio Psicológico</h3>
-      <p>Atendimento emocional individual e em grupo com profissionais.</p>
-      <a class="btn" href="#/projetos" aria-label="Saiba mais">Saiba mais</a>
+      <div class="card-body">
+        <h3>Apoio Psicológico</h3>
+        <p>Atendimento individual e em grupo com profissionais.</p>
+        <a class="btn btn-card" href="#/projetos">Saiba mais</a>
+      </div>
     </article>
 
     <article class="card">
       <img src="assets/images/criancas.jpeg" alt="Atividades Infantis">
-      <h3>Atividades Infantis</h3>
-      <p>Recreação, acolhimento e reforço escolar para crianças.</p>
-      <a class="btn" href="#/projetos" aria-label="Saiba mais">Saiba mais</a>
+      <div class="card-body">
+        <h3>Atividades Infantis</h3>
+        <p>Recreação, acolhimento e reforço escolar.</p>
+        <a class="btn btn-card" href="#/projetos">Saiba mais</a>
+      </div>
     </article>
   </section>
 </section>
