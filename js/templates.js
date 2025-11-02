@@ -1,16 +1,30 @@
 export const TPL_HOME = `
-<section class="hero hero-overlay" style="background-image:url('assets/images/ukraine-family.jpg')">
-  <div class="container hero-inner">
-    <h2>Ficar parado não é opção — junte-se a nós</h2>
-    <p>Apoio a famílias afetadas pela guerra: alimentação, acolhimento psicológico e atividades infantis.</p>
-    <p><a class="btn" href="#/cadastro">Quero participar</a></p>
+<section class="hero hero-cover">
+  <div class="container hero__inner">
+    <div class="hero__text">
+      <h1 class="headline">Ficar parado não é opção — junte-se a nós</h1>
+      <p class="subhead">Apoio a famílias afetadas pela guerra: alimentação, acolhimento psicológico e atividades infantis.</p>
+      <a class="btn btn-primary" href="#/cadastro">Quero participar</a>
+    </div>
+    <div class="hero__media">
+      <img src="assets/images/ukraine-family.jpg" alt="Família acolhida pela ONG">
+    </div>
   </div>
 </section>
 
-<section class="stats container">
-  <article class="stat"><span class="stat-label">Famílias atendidas</span><span class="stat-number">1.432</span></article>
-  <article class="stat"><span class="stat-label">Voluntários ativos</span><span class="stat-number">189</span></article>
-  <article class="stat"><span class="stat-label">Cidades alcançadas</span><span class="stat-number">23</span></article>
+<section class="container stats-row">
+  <article class="stat-card">
+    <span class="stat-title">Famílias atendidas</span>
+    <strong class="stat-number">1.432</strong>
+  </article>
+  <article class="stat-card">
+    <span class="stat-title">Voluntários ativos</span>
+    <strong class="stat-number">189</strong>
+  </article>
+  <article class="stat-card">
+    <span class="stat-title">Cidades alcançadas</span>
+    <strong class="stat-number">23</strong>
+  </article>
 </section>
 
 <section class="container section">
