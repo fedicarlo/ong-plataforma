@@ -25,3 +25,12 @@
 @media (max-width:768px){
   .topbar nav ul{gap:14px}
 }
+
+/* Hamburguer (mobile) */
+.menu-toggle{display:none;background:transparent;border:0;color:#fff;font-size:22px}
+@media (max-width:768px){
+  .topbar{gap:10px}
+  nav ul{display:none;flex-direction:column;background:#0059d6;position:absolute;right:16px;top:60px;padding:12px;border-radius:10px}
+  nav ul.active{display:flex}
+  .menu-toggle{display:block}
+}

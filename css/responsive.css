@@ -1,5 +1,8 @@
-@media (max-width:480px){ h1{font-size:1.4rem} }
-@media (min-width:480px){ }
-@media (min-width:768px){ }
-@media (min-width:1024px){ }
-@media (min-width:1440px){ }
+@media (max-width:480px){
+  h1{font-size:1.6rem}
+  .topbar nav ul{gap:12px}
+}
+@media (min-width:480px){ /* XS->SM */ }
+@media (min-width:768px){ /* MD */ }
+@media (min-width:1024px){ /* LG */ }
+@media (min-width:1440px){ /* XL */ }

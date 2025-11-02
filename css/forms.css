@@ -1,4 +1,9 @@
 form{display:flex;flex-direction:column;gap:12px;max-width:620px;margin-top:var(--space-3)}
 label{font-weight:600}
-input{padding:12px;border:1px solid var(--neutral-300);border-radius:var(--radius-md);font-size:var(--font-md)}
-input:focus{outline:2px solid var(--color-primary)}
+input,select,textarea{
+  padding:12px;border:1px solid var(--neutral-300);border-radius:var(--radius-md);font-size:var(--font-md)
+}
+input:focus,select:focus,textarea:focus{outline:2px solid var(--color-primary)}
+input:valid{border-color:#22c55e}
+input:invalid:focus{border-color:#ef4444;outline-color:#ef4444}
+.help{font-size:var(--font-sm);color:var(--neutral-500)}

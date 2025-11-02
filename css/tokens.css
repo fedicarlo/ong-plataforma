@@ -1,10 +1,41 @@
 :root{
-  --color-primary:#005BBB;
-  --color-secondary:#FFD500;
-  --neutral-100:#fff; --neutral-200:#f5f5f5; --neutral-300:#e1e1e1;
-  --neutral-500:#777; --neutral-700:#333; --neutral-900:#111;
-  --font-xs:.75rem; --font-sm:.875rem; --font-md:1rem; --font-lg:1.25rem; --font-xl:1.75rem;
-  --space-1:8px; --space-2:16px; --space-3:24px; --space-4:32px; --space-5:48px; --space-6:64px;
-  --radius-sm:6px; --radius-md:10px; --radius-lg:18px;
-  --shadow-sm:0 1px 4px rgba(0,0,0,.1); --shadow-md:0 3px 10px rgba(0,0,0,.15);
+  /* Cores principais */
+  --color-primary:#0059d6;
+  --color-primary-600:#003c8f;
+  --color-secondary:#ffb703;
+  --color-accent:#00c2ff;
+
+  /* Escala neutra */
+  --neutral-900:#0f172a;
+  --neutral-700:#334155;
+  --neutral-500:#64748b;
+  --neutral-300:#cbd5e1;
+  --neutral-200:#e5e7eb;
+  --neutral-100:#f1f5f9;
+  --white:#ffffff;
+
+  /* Tipografia */
+  --font-family: system-ui, -apple-system, Segoe UI, Roboto, Inter, Arial, sans-serif;
+  --font-2xl:2rem;      /* ~32px  */
+  --font-xl:1.5rem;     /* ~24px  */
+  --font-lg:1.25rem;    /* ~20px  */
+  --font-md:1rem;       /* ~16px  */
+  --font-sm:0.875rem;   /* ~14px  */
+
+  /* Espaçamento modular */
+  --space-1:8px;
+  --space-2:16px;
+  --space-3:24px;
+  --space-4:32px;
+  --space-5:48px;
+  --space-6:64px;
+
+  /* Bordas & radius */
+  --radius-sm:6px;
+  --radius-md:10px;
+  --radius-lg:14px;
+
+  /* Sombras */
+  --shadow-sm:0 1px 2px rgba(0,0,0,.06);
+  --shadow-md:0 2px 6px rgba(0,0,0,.08);
 }
